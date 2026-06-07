@@ -76,6 +76,19 @@ const tools: {
   { name: "Next.js", icon: siNextdotjs },
 ];
 
+const projectTickerItems = [
+  { title: "Mineval Wizard", meta: "Enterprise SaaS" },
+  { title: "InAfrica Network", meta: "Mobile media" },
+  { title: "IATF2018", meta: "Pan-African trade" },
+  { title: "Mining valuation platform", meta: "Product UX" },
+  { title: "African news experience", meta: "Mobile UI" },
+  { title: "Trade fair ecosystem", meta: "Creative direction" },
+  { title: "Event registration systems", meta: "Digital operations" },
+  { title: "Exhibition environments", meta: "Brand experience" },
+  { title: "Stakeholder communications", meta: "Campaign systems" },
+  { title: "Dashboard concepts", meta: "Interface design" },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f6f6ef] text-[#111111]">
@@ -215,6 +228,38 @@ export default function Home() {
                   </span>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        aria-label="Project archive ticker"
+        className="border-b border-black/10 bg-white py-5"
+      >
+        <div className="mx-auto grid max-w-7xl min-w-0 gap-4 overflow-hidden px-5 sm:px-8 md:grid-cols-[12rem_1fr] md:items-center lg:px-10">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-black/45">
+            Project archive
+          </p>
+
+          <div className="tools-marquee min-w-0 overflow-hidden">
+            <div className="project-marquee__track flex w-max gap-3">
+              {[...projectTickerItems, ...projectTickerItems].map(
+                (project, index) => (
+                  <div
+                    className="flex h-12 items-center gap-3 rounded-full border border-black/10 bg-[#f6f6ef] px-4 text-black/70"
+                    key={`${project.title}-${index}`}
+                  >
+                    <span className="whitespace-nowrap text-sm font-bold text-black">
+                      {project.title}
+                    </span>
+                    <span className="h-1.5 w-1.5 rounded-full bg-lime-400" />
+                    <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.12em] text-black/45">
+                      {project.meta}
+                    </span>
+                  </div>
+                ),
+              )}
             </div>
           </div>
         </div>

@@ -65,7 +65,15 @@ html {
   animation: tools-marquee 38s linear infinite;
 }
 
+.project-marquee__track {
+  animation: tools-marquee 46s linear infinite;
+}
+
 .tools-marquee:hover .tools-marquee__track {
+  animation-play-state: paused;
+}
+
+.tools-marquee:hover .project-marquee__track {
   animation-play-state: paused;
 }
 
@@ -87,6 +95,10 @@ html {
   }
 
   .tools-marquee__track {
+    animation: none;
+  }
+
+  .project-marquee__track {
     animation: none;
   }
 }
