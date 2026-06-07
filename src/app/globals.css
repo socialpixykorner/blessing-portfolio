@@ -43,3 +43,50 @@ html {
   background: #bef264;
   color: #111111;
 }
+
+.tools-marquee {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+
+.tools-marquee__track {
+  animation: tools-marquee 38s linear infinite;
+}
+
+.tools-marquee:hover .tools-marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes tools-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tools-marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .tools-marquee__track {
+    animation: none;
+  }
+}

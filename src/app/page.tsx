@@ -1,5 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  siFigma,
+  siGmail,
+  siGoogleanalytics,
+  siGooglemarketingplatform,
+  siNextdotjs,
+  siNotion,
+  siVercel,
+  siWebflow,
+  siWordpress,
+  type SimpleIcon,
+} from "simple-icons/icons";
 import { projects } from "@/lib/projects";
 
 const services = [
@@ -44,6 +56,26 @@ const faqs = [
   },
 ];
 
+const tools: {
+  name: string;
+  icon?: SimpleIcon;
+  mark?: string;
+}[] = [
+  { name: "Figma", icon: siFigma },
+  { name: "Adobe Creative Cloud", mark: "CC" },
+  { name: "Webflow", icon: siWebflow },
+  { name: "WordPress", icon: siWordpress },
+  { name: "ChatGPT", mark: "GPT" },
+  { name: "Codex", mark: "CX" },
+  { name: "GA4", icon: siGoogleanalytics },
+  { name: "DV360", icon: siGooglemarketingplatform },
+  { name: "Notion", icon: siNotion },
+  { name: "Gmail", icon: siGmail },
+  { name: "Microsoft Teams", mark: "T" },
+  { name: "Vercel", icon: siVercel },
+  { name: "Next.js", icon: siNextdotjs },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f6f6ef] text-[#111111]">
@@ -64,10 +96,11 @@ export default function Home() {
             ))}
           </div>
           <a
-            className="inline-flex h-10 shrink-0 items-center rounded-full border border-black/15 bg-white px-4 text-sm font-bold shadow-sm transition hover:bg-lime-300"
+            className="inline-flex h-10 shrink-0 items-center rounded-full border border-black/15 bg-white px-3 text-xs font-bold shadow-sm transition hover:bg-lime-300 sm:px-4 sm:text-sm"
             href="mailto:hello@example.com"
           >
-            Start a project
+            <span className="sm:hidden">Start</span>
+            <span className="hidden sm:inline">Start a project</span>
           </a>
         </nav>
       </header>
@@ -152,6 +185,36 @@ export default function Home() {
                   </div>
                 ),
               )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-black/10 bg-[#f6f6ef] py-10">
+        <div className="mx-auto flex max-w-7xl min-w-0 flex-col gap-6 overflow-hidden px-5 sm:px-8 lg:px-10">
+          <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Tools I use.
+            </h2>
+            <p className="max-w-[22rem] text-sm font-medium leading-6 text-black/55 sm:max-w-lg">
+              A practical stack for design systems, product interfaces,
+              analytics, collaboration, and deployment.
+            </p>
+          </div>
+
+          <div className="tools-marquee min-w-0 overflow-hidden border-y border-black/10 py-5">
+            <div className="tools-marquee__track flex w-max gap-4">
+              {[...tools, ...tools].map((tool, index) => (
+                <div
+                  className="flex h-14 min-w-48 items-center gap-3 rounded-full border border-black/10 bg-white/70 px-5 text-neutral-500 grayscale transition hover:bg-white hover:text-neutral-900"
+                  key={`${tool.name}-${index}`}
+                >
+                  <LogoMark tool={tool} />
+                  <span className="whitespace-nowrap text-sm font-semibold">
+                    {tool.name}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -320,5 +383,29 @@ export default function Home() {
         </div>
       </footer>
     </main>
+  );
+}
+
+function LogoMark({ tool }: { tool: (typeof tools)[number] }) {
+  if (tool.icon) {
+    return (
+      <svg
+        aria-hidden="true"
+        className="h-6 w-6 shrink-0"
+        role="img"
+        viewBox="0 0 24 24"
+      >
+        <path d={tool.icon.path} fill="currentColor" />
+      </svg>
+    );
+  }
+
+  return (
+    <span
+      aria-hidden="true"
+      className="flex h-7 min-w-7 shrink-0 items-center justify-center rounded-md border border-current px-1 text-[0.65rem] font-bold leading-none tracking-tight"
+    >
+      {tool.mark}
+    </span>
   );
 }
