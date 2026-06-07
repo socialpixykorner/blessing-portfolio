@@ -1,0 +1,36 @@
+{
+  "name": "blessing-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "bun node_modules/next/dist/bin/next dev --webpack",
+    "build": "bun node_modules/next/dist/bin/next build --webpack",
+    "start": "bun node_modules/next/dist/bin/next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "16.2.7",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@next/swc-wasm-nodejs": "^16.2.7",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.7",
+    "lightningcss-darwin-arm64": "^1.32.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
+}
