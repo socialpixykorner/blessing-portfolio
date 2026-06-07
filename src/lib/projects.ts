@@ -30,7 +30,7 @@ export const projects: Project[] = [
       "A conceptual enterprise SaaS platform transforming geological and commodity data into investor-ready mining valuations.",
     accent: "bg-[#d9a15f]",
     accentHex: "#d9a15f",
-    image: "/images/case-studies/mineval-wizard.webp",
+    image: "/images/case-studies/mineval-wizard-full.png",
     scope: [
       "Product strategy",
       "UX architecture",
