@@ -76,17 +76,63 @@ const tools: {
   { name: "Next.js", icon: siNextdotjs },
 ];
 
-const projectTickerItems = [
-  { title: "Mineval Wizard", meta: "Enterprise SaaS" },
-  { title: "InAfrica Network", meta: "Mobile media" },
-  { title: "IATF2018", meta: "Pan-African trade" },
-  { title: "Mining valuation platform", meta: "Product UX" },
-  { title: "African news experience", meta: "Mobile UI" },
-  { title: "Trade fair ecosystem", meta: "Creative direction" },
-  { title: "Event registration systems", meta: "Digital operations" },
-  { title: "Exhibition environments", meta: "Brand experience" },
-  { title: "Stakeholder communications", meta: "Campaign systems" },
-  { title: "Dashboard concepts", meta: "Interface design" },
+const projectTickerCards = [
+  {
+    title: "Solar Commerce",
+    category: "Web platform",
+    year: "2024",
+    descriptor: "Product pages, quoting flows, and responsive storefront UX.",
+    visual: "from-[#d9a15f] via-[#f6f6ef] to-[#53613a]",
+  },
+  {
+    title: "EventFlow",
+    category: "Registration",
+    year: "2023",
+    descriptor: "Ticketing journeys, attendee capture, and event dashboards.",
+    visual: "from-[#f6f6ef] via-[#d7e7dd] to-[#2f6f67]",
+  },
+  {
+    title: "Market Pulse",
+    category: "Analytics",
+    year: "2022",
+    descriptor: "Executive reporting views for campaign and media performance.",
+    visual: "from-[#101010] via-[#2c2c2c] to-[#bef264]",
+  },
+  {
+    title: "Foodline Africa",
+    category: "Ecommerce",
+    year: "2021",
+    descriptor: "Category landing pages, product cards, and checkout moments.",
+    visual: "from-[#e8b142] via-[#f6f6ef] to-[#cc3a2f]",
+  },
+  {
+    title: "Five-A-Side",
+    category: "Sports media",
+    year: "2020",
+    descriptor: "Campaign visuals, event pages, and fan engagement screens.",
+    visual: "from-[#101010] via-[#25331f] to-[#9ee633]",
+  },
+  {
+    title: "Civic Connect",
+    category: "Public sector",
+    year: "2019",
+    descriptor: "Service information architecture and stakeholder portals.",
+    visual: "from-[#f6f6ef] via-[#d8d9d2] to-[#55616d]",
+  },
+  {
+    title: "Trade Summit",
+    category: "Brand system",
+    year: "2018",
+    descriptor: "Identity, signage, communications, and digital touchpoints.",
+    visual: "from-[#e3294f] via-[#f6f6ef] to-[#101010]",
+  },
+  {
+    title: "Creator Desk",
+    category: "SaaS concept",
+    year: "2017",
+    descriptor: "Creator workflows, content planning, and dashboard patterns.",
+    visual: "from-[#111111] via-[#302620] to-[#d9a15f]",
+  },
 ];
 
 export default function Home() {
@@ -233,31 +279,62 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        aria-label="Project archive ticker"
-        className="border-b border-black/10 bg-white py-5"
-      >
-        <div className="mx-auto grid max-w-7xl min-w-0 gap-4 overflow-hidden px-5 sm:px-8 md:grid-cols-[12rem_1fr] md:items-center lg:px-10">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-black/45">
-            Project archive
-          </p>
+      <section aria-label="Project archive ticker" className="bg-[#101010] py-8">
+        <div className="mx-auto flex max-w-7xl min-w-0 flex-col gap-5 overflow-hidden px-5 sm:px-8 lg:px-10">
+          <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/45">
+              Project archive
+            </p>
+            <p className="max-w-md text-sm font-medium leading-6 text-white/50">
+              A rolling snapshot of dummy project formats shaped over the
+              years.
+            </p>
+          </div>
 
-          <div className="tools-marquee min-w-0 overflow-hidden">
-            <div className="project-marquee__track flex w-max gap-3">
-              {[...projectTickerItems, ...projectTickerItems].map(
+          <div className="project-card-marquee min-w-0 overflow-hidden">
+            <div className="project-marquee__track flex w-max gap-5">
+              {[...projectTickerCards, ...projectTickerCards].map(
                 (project, index) => (
-                  <div
-                    className="flex h-12 items-center gap-3 rounded-full border border-black/10 bg-[#f6f6ef] px-4 text-black/70"
+                  <article
+                    className="group w-[18.5rem] overflow-hidden rounded-lg border border-white/10 bg-[#f6f6ef] p-2 text-black shadow-2xl shadow-black/25 sm:w-[25rem]"
                     key={`${project.title}-${index}`}
                   >
-                    <span className="whitespace-nowrap text-sm font-bold text-black">
-                      {project.title}
-                    </span>
-                    <span className="h-1.5 w-1.5 rounded-full bg-lime-400" />
-                    <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.12em] text-black/45">
-                      {project.meta}
-                    </span>
-                  </div>
+                    <div
+                      className={`relative h-28 overflow-hidden rounded-md bg-gradient-to-br ${project.visual} sm:h-36`}
+                    >
+                      <div className="absolute inset-x-4 top-4 h-3 rounded-full bg-white/70" />
+                      <div className="absolute bottom-4 left-4 right-4 grid grid-cols-[1.2fr_0.8fr] gap-3">
+                        <div className="space-y-2 rounded-md bg-white/75 p-3 shadow-sm">
+                          <div className="h-2 w-16 rounded-full bg-black/70" />
+                          <div className="h-2 w-24 rounded-full bg-black/20" />
+                          <div className="h-2 w-14 rounded-full bg-lime-500" />
+                        </div>
+                        <div className="grid gap-2">
+                          <span className="rounded-md bg-black/80" />
+                          <span className="rounded-md bg-white/55" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="grid gap-4 px-2 py-4 sm:grid-cols-[1fr_auto] sm:items-end">
+                      <div>
+                        <div className="flex items-center gap-2 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-black/45">
+                          <span>{project.category}</span>
+                          <span className="h-1.5 w-1.5 rounded-full bg-lime-500" />
+                          <span>{project.year}</span>
+                        </div>
+                        <h3 className="mt-2 text-2xl font-bold tracking-tight">
+                          {project.title}
+                        </h3>
+                        <p className="mt-2 max-w-sm text-sm font-medium leading-6 text-black/55">
+                          {project.descriptor}
+                        </p>
+                      </div>
+                      <span className="hidden h-10 w-10 items-center justify-center rounded-full border border-black/15 text-lg font-bold transition group-hover:bg-black group-hover:text-white sm:flex">
+                        ↗
+                      </span>
+                    </div>
+                  </article>
                 ),
               )}
             </div>

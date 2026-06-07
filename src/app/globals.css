@@ -61,12 +61,29 @@ html {
   );
 }
 
+.project-card-marquee {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 6%,
+    #000 94%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 6%,
+    #000 94%,
+    transparent
+  );
+}
+
 .tools-marquee__track {
   animation: tools-marquee 38s linear infinite;
 }
 
 .project-marquee__track {
-  animation: tools-marquee 46s linear infinite;
+  animation: tools-marquee 52s linear infinite;
 }
 
 .tools-marquee:hover .tools-marquee__track {
@@ -74,6 +91,10 @@ html {
 }
 
 .tools-marquee:hover .project-marquee__track {
+  animation-play-state: paused;
+}
+
+.project-card-marquee:hover .project-marquee__track {
   animation-play-state: paused;
 }
 
@@ -89,6 +110,12 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   .tools-marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .project-card-marquee {
     overflow-x: auto;
     -webkit-mask-image: none;
     mask-image: none;
