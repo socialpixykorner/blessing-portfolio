@@ -1,29 +1,5 @@
-const projects = [
-  {
-    title: "Pixy LiveX",
-    type: "Streaming product",
-    year: "2026",
-    summary:
-      "A polished live-commerce experience with creator tools, audience flows, and responsive product moments.",
-    accent: "bg-lime-300",
-  },
-  {
-    title: "Social Pixy Korner",
-    type: "Brand platform",
-    year: "2025",
-    summary:
-      "A social-first commerce identity and web presence built for clarity, speed, and conversion.",
-    accent: "bg-sky-300",
-  },
-  {
-    title: "Portfolio System",
-    type: "Personal OS",
-    year: "2026",
-    summary:
-      "A flexible digital home for case studies, writing, experiments, and long-term professional growth.",
-    accent: "bg-fuchsia-300",
-  },
-];
+import Link from "next/link";
+import { projects } from "@/lib/projects";
 
 const services = [
   {
@@ -197,7 +173,8 @@ export default function Home() {
           </div>
           <div className="grid gap-5">
             {projects.map((project, index) => (
-              <article
+              <Link
+                href={`/work/${project.slug}`}
                 className="group grid gap-6 rounded-lg border border-black/10 bg-[#f6f6ef] p-4 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 md:grid-cols-[0.85fr_1fr_0.2fr] md:items-center"
                 key={project.title}
               >
@@ -228,7 +205,7 @@ export default function Home() {
                 <span className="flex h-12 w-12 items-center justify-center rounded-full border border-black/15 text-xl font-black transition group-hover:bg-black group-hover:text-white">
                   ↗
                 </span>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
