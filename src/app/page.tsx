@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 
@@ -115,40 +116,39 @@ export default function Home() {
         </div>
 
         <div className="relative flex min-h-[620px] min-w-0 flex-col overflow-hidden rounded-lg bg-[#101010] p-5 text-white shadow-2xl shadow-black/20">
-          <div className="flex items-center justify-between border-b border-white/10 pb-4 text-xs font-bold uppercase tracking-[0.18em] text-white/55">
-            <span>Selected interface</span>
-            <span>2026</span>
+          <Image
+            alt="Blessing Katsidzira portrait behind dark vertical panels"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            fill
+            priority
+            sizes="(min-width: 1024px) 46vw, 100vw"
+            src="/images/bk-back.png"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/5 to-black/78" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-transparent to-black/20" />
+
+          <div className="relative flex items-center justify-between border-b border-white/10 pb-4 text-xs font-bold uppercase tracking-[0.18em] text-white/65">
+            <span>Portrait system</span>
+            <span>BK</span>
           </div>
-          <div className="grid flex-1 content-between gap-5 pt-8">
-            <div className="grid gap-4">
-              <div className="rounded-md bg-lime-300 p-5 text-black">
-                <p className="text-sm font-black uppercase tracking-[0.16em]">
-                  Launch score
-                </p>
-                <p className="mt-12 text-7xl font-black tracking-tight">94%</p>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-md border border-white/10 bg-white/10 p-4">
-                  <p className="text-sm text-white/55">Strategy</p>
-                  <p className="mt-8 text-3xl font-black">01</p>
-                </div>
-                <div className="rounded-md border border-white/10 bg-white/10 p-4">
-                  <p className="text-sm text-white/55">Build</p>
-                  <p className="mt-8 text-3xl font-black">02</p>
-                </div>
-              </div>
+          <div className="relative grid flex-1 content-between gap-5 pt-8">
+            <div className="max-w-xs rounded-md border border-white/10 bg-black/50 p-5 backdrop-blur">
+              <p className="text-sm font-black uppercase tracking-[0.16em] text-lime-300">
+                Focus
+              </p>
+              <p className="mt-10 text-5xl font-black leading-none tracking-tight">
+                Design. Build. Launch.
+              </p>
             </div>
-            <div className="space-y-4">
-              {["Design system", "Responsive build", "Launch support"].map(
+            <div className="grid gap-4 sm:grid-cols-3">
+              {["Product design", "Web builds", "Brand systems"].map(
                 (item, index) => (
                   <div
-                    className="flex items-center justify-between rounded-md border border-white/10 bg-white/[0.06] px-4 py-3"
+                    className="rounded-md border border-white/10 bg-black/55 px-4 py-4 backdrop-blur"
                     key={item}
                   >
-                    <span className="font-semibold">{item}</span>
-                    <span className="text-sm text-lime-300">
-                      0{index + 1}
-                    </span>
+                    <p className="text-sm font-semibold text-white">{item}</p>
+                    <p className="mt-8 text-sm text-lime-300">0{index + 1}</p>
                   </div>
                 ),
               )}
