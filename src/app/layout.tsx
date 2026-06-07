@@ -3,7 +3,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Blessing Katsidzira | Portfolio",
-  description: "Portfolio website for Blessing Katsidzira.",
+  description:
+    "A bold portfolio for Blessing Katsidzira, focused on product design, web development, and brand systems.",
 };
 
 export default function RootLayout({

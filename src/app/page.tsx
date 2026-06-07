@@ -1,56 +1,344 @@
+const projects = [
+  {
+    title: "Pixy LiveX",
+    type: "Streaming product",
+    year: "2026",
+    summary:
+      "A polished live-commerce experience with creator tools, audience flows, and responsive product moments.",
+    accent: "bg-lime-300",
+  },
+  {
+    title: "Social Pixy Korner",
+    type: "Brand platform",
+    year: "2025",
+    summary:
+      "A social-first commerce identity and web presence built for clarity, speed, and conversion.",
+    accent: "bg-sky-300",
+  },
+  {
+    title: "Portfolio System",
+    type: "Personal OS",
+    year: "2026",
+    summary:
+      "A flexible digital home for case studies, writing, experiments, and long-term professional growth.",
+    accent: "bg-fuchsia-300",
+  },
+];
+
+const services = [
+  {
+    title: "Product Design",
+    description:
+      "Interfaces, user journeys, design systems, and prototypes shaped around real product outcomes.",
+  },
+  {
+    title: "Web Development",
+    description:
+      "Fast Next.js builds with responsive layouts, thoughtful motion, and clean handoff-ready code.",
+  },
+  {
+    title: "Brand Systems",
+    description:
+      "Practical identity foundations, visual direction, and reusable rules for consistent launches.",
+  },
+];
+
+const process = [
+  "Map the problem, audience, constraints, and the smallest useful launch.",
+  "Shape the interface direction with a strong visual system and clear flows.",
+  "Build, test, refine, and prepare the work for real users.",
+];
+
+const faqs = [
+  {
+    question: "What kind of projects does Blessing take on?",
+    answer:
+      "Portfolio sites, landing pages, SaaS interfaces, product refreshes, and brand-led web experiences.",
+  },
+  {
+    question: "Can the site grow into case studies and a blog?",
+    answer:
+      "Yes. This structure is ready for richer project pages, writing, testimonials, and contact flows.",
+  },
+  {
+    question: "Is this ready to customize?",
+    answer:
+      "Yes. The layout, sections, and copy are in place so the next step is swapping in real work and details.",
+  },
+];
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center bg-neutral-950 px-6 py-16 text-white sm:px-10 lg:px-16">
-      <section className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-        <div className="space-y-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">
-            Portfolio
-          </p>
-          <div className="space-y-5">
-            <h1 className="max-w-3xl text-5xl font-semibold leading-tight text-balance sm:text-6xl">
-              Blessing Katsidzira
-            </h1>
-            <p className="max-w-2xl text-lg leading-8 text-neutral-300">
-              A modern Next.js portfolio starter, ready for projects, case
-              studies, writing, and contact details.
-            </p>
+    <main className="min-h-screen overflow-x-hidden bg-[#f6f6ef] text-[#111111]">
+      <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f6f6ef]/90 backdrop-blur">
+        <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
+          <a className="text-base font-black tracking-tight" href="#top">
+            Blessing
+          </a>
+          <div className="hidden items-center gap-7 text-sm font-semibold md:flex">
+            {["Work", "Services", "Process", "Contact"].map((item) => (
+              <a
+                className="transition hover:text-lime-700"
+                href={`#${item.toLowerCase()}`}
+                key={item}
+              >
+                {item}
+              </a>
+            ))}
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <a
-              className="inline-flex h-12 items-center justify-center rounded-md bg-emerald-300 px-5 text-sm font-semibold text-neutral-950 transition hover:bg-emerald-200"
-              href="mailto:hello@example.com"
-            >
-              Get in touch
-            </a>
-            <a
-              className="inline-flex h-12 items-center justify-center rounded-md border border-white/15 px-5 text-sm font-semibold text-white transition hover:bg-white/10"
-              href="#projects"
-            >
-              View projects
-            </a>
+          <a
+            className="inline-flex h-10 shrink-0 items-center rounded-full border border-black/15 bg-white px-4 text-sm font-bold shadow-sm transition hover:bg-lime-300"
+            href="mailto:hello@example.com"
+          >
+            Start a project
+          </a>
+        </nav>
+      </header>
+
+      <section
+        className="mx-auto grid w-full max-w-7xl min-w-0 gap-12 px-5 pb-20 pt-16 sm:px-8 sm:pt-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-10"
+        id="top"
+      >
+        <div className="flex min-h-[620px] min-w-0 flex-col justify-between">
+          <div className="flex w-fit items-center gap-3 rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-bold shadow-sm">
+            <span className="h-2.5 w-2.5 rounded-full bg-lime-400" />
+            Available for select projects
+          </div>
+
+          <div className="space-y-8">
+            <h1 className="max-w-full text-[clamp(3.15rem,10vw,8.2rem)] font-black leading-[0.88] tracking-tight lg:max-w-5xl">
+              {["Building", "polished", "digital", "products", "for", "ambitious", "brands."].map(
+                (word) => (
+                  <span className="block lg:inline" key={word}>
+                    {word}{" "}
+                  </span>
+                ),
+              )}
+            </h1>
+            <div className="grid gap-7 border-t border-black/15 pt-7 md:grid-cols-[0.85fr_1fr]">
+              <p className="max-w-full text-xl font-semibold leading-8 text-black/70">
+                I help founders and teams design and ship fast, thoughtful web
+                experiences.
+              </p>
+              <div className="flex flex-col gap-3 sm:flex-row md:justify-end">
+                <a
+                  className="inline-flex h-12 items-center justify-center rounded-full bg-black px-6 text-sm font-black text-white transition hover:bg-lime-700"
+                  href="#work"
+                >
+                  View work
+                </a>
+                <a
+                  className="inline-flex h-12 items-center justify-center rounded-full border border-black/15 bg-white px-6 text-sm font-black transition hover:bg-lime-300"
+                  href="#contact"
+                >
+                  Start a project
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div
-          id="projects"
-          className="grid gap-4 rounded-lg border border-white/10 bg-white/[0.03] p-4"
-        >
-          {["Featured project", "Case study", "About"].map((item) => (
-            <article
-              className="rounded-md border border-white/10 bg-neutral-900 p-5"
-              key={item}
-            >
-              <p className="text-sm font-medium text-emerald-300">{item}</p>
-              <h2 className="mt-3 text-xl font-semibold">
-                Add your next portfolio section
-              </h2>
-              <p className="mt-2 text-sm leading-6 text-neutral-400">
-                Replace this starter content with your work, story, and links.
-              </p>
-            </article>
-          ))}
+        <div className="relative flex min-h-[620px] min-w-0 flex-col overflow-hidden rounded-lg bg-[#101010] p-5 text-white shadow-2xl shadow-black/20">
+          <div className="flex items-center justify-between border-b border-white/10 pb-4 text-xs font-bold uppercase tracking-[0.18em] text-white/55">
+            <span>Selected interface</span>
+            <span>2026</span>
+          </div>
+          <div className="grid flex-1 content-between gap-5 pt-8">
+            <div className="grid gap-4">
+              <div className="rounded-md bg-lime-300 p-5 text-black">
+                <p className="text-sm font-black uppercase tracking-[0.16em]">
+                  Launch score
+                </p>
+                <p className="mt-12 text-7xl font-black tracking-tight">94%</p>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-md border border-white/10 bg-white/10 p-4">
+                  <p className="text-sm text-white/55">Strategy</p>
+                  <p className="mt-8 text-3xl font-black">01</p>
+                </div>
+                <div className="rounded-md border border-white/10 bg-white/10 p-4">
+                  <p className="text-sm text-white/55">Build</p>
+                  <p className="mt-8 text-3xl font-black">02</p>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-4">
+              {["Design system", "Responsive build", "Launch support"].map(
+                (item, index) => (
+                  <div
+                    className="flex items-center justify-between rounded-md border border-white/10 bg-white/[0.06] px-4 py-3"
+                    key={item}
+                  >
+                    <span className="font-semibold">{item}</span>
+                    <span className="text-sm text-lime-300">
+                      0{index + 1}
+                    </span>
+                  </div>
+                ),
+              )}
+            </div>
+          </div>
         </div>
       </section>
+
+      <section
+        className="border-y border-black/10 bg-white px-5 py-20 sm:px-8 lg:px-10"
+        id="work"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <h2 className="max-w-3xl text-5xl font-black tracking-tight sm:text-7xl">
+              Work with momentum.
+            </h2>
+            <p className="max-w-sm text-base font-semibold leading-7 text-black/60">
+              A portfolio structure for showing the thinking, craft, and
+              results behind each launch.
+            </p>
+          </div>
+          <div className="grid gap-5">
+            {projects.map((project, index) => (
+              <article
+                className="group grid gap-6 rounded-lg border border-black/10 bg-[#f6f6ef] p-4 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 md:grid-cols-[0.85fr_1fr_0.2fr] md:items-center"
+                key={project.title}
+              >
+                <div
+                  className={`${project.accent} min-h-64 rounded-md p-5 text-black`}
+                >
+                  <p className="text-sm font-black uppercase tracking-[0.16em]">
+                    {project.type}
+                  </p>
+                  <div className="mt-24 h-16 rounded-md border-2 border-black/20 bg-white/55" />
+                  <div className="mt-3 grid grid-cols-3 gap-3">
+                    <span className="h-8 rounded bg-black/10" />
+                    <span className="h-8 rounded bg-black/10" />
+                    <span className="h-8 rounded bg-black/10" />
+                  </div>
+                </div>
+                <div>
+                  <p className="font-mono text-sm text-black/50">
+                    0{index + 1} / {project.year}
+                  </p>
+                  <h3 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+                    {project.title}
+                  </h3>
+                  <p className="mt-5 max-w-2xl text-lg leading-8 text-black/65">
+                    {project.summary}
+                  </p>
+                </div>
+                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-black/15 text-xl font-black transition group-hover:bg-black group-hover:text-white">
+                  ↗
+                </span>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-black px-5 py-24 text-white sm:px-8 lg:px-10" id="services">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="max-w-4xl text-5xl font-black tracking-tight sm:text-7xl">
+            Services that move from idea to launch.
+          </h2>
+          <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 lg:grid-cols-3">
+            {services.map((service) => (
+              <article className="bg-black p-8" key={service.title}>
+                <p className="text-2xl font-black">{service.title}</p>
+                <p className="mt-6 text-base leading-7 text-white/62">
+                  {service.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-24 sm:px-8 lg:px-10" id="process">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <h2 className="text-5xl font-black tracking-tight sm:text-7xl">
+              A clear path from brief to shipped.
+            </h2>
+            <p className="mt-7 text-lg font-semibold leading-8 text-black/60">
+              Structured enough to keep momentum, flexible enough to protect the
+              craft.
+            </p>
+          </div>
+          <div className="grid gap-4">
+            {process.map((step, index) => (
+              <article
+                className="grid gap-6 rounded-lg border border-black/10 bg-white p-6 md:grid-cols-[4rem_1fr]"
+                key={step}
+              >
+                <span className="font-mono text-3xl font-black text-lime-700">
+                  0{index + 1}
+                </span>
+                <p className="text-2xl font-black leading-snug">{step}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-black/10 bg-lime-300 px-5 py-20 sm:px-8 lg:px-10">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
+          <p className="font-mono text-sm font-black uppercase tracking-[0.18em]">
+            Client energy
+          </p>
+          <blockquote className="text-4xl font-black leading-tight tracking-tight sm:text-6xl">
+            “Blessing brings calm strategy, sharp visuals, and the kind of build
+            quality that makes a launch feel effortless.”
+          </blockquote>
+        </div>
+      </section>
+
+      <section className="bg-white px-5 py-24 sm:px-8 lg:px-10">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+          <h2 className="text-5xl font-black tracking-tight sm:text-7xl">
+            Questions before we start?
+          </h2>
+          <div className="grid gap-3">
+            {faqs.map((faq) => (
+              <details
+                className="group rounded-lg border border-black/10 bg-[#f6f6ef] p-6"
+                key={faq.question}
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-xl font-black">
+                  {faq.question}
+                  <span className="text-3xl leading-none transition group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-5 max-w-2xl text-base leading-7 text-black/60">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <footer
+        className="bg-[#101010] px-5 py-20 text-white sm:px-8 lg:px-10"
+        id="contact"
+      >
+        <div className="mx-auto max-w-7xl">
+          <h2 className="max-w-5xl text-[clamp(4rem,10vw,9rem)] font-black leading-[0.88] tracking-tight">
+            Have an idea? Let&apos;s talk.
+          </h2>
+          <div className="mt-12 flex flex-col justify-between gap-8 border-t border-white/10 pt-8 md:flex-row md:items-end">
+            <a
+              className="inline-flex h-14 w-fit items-center justify-center rounded-full bg-lime-300 px-7 text-sm font-black text-black transition hover:bg-white"
+              href="mailto:hello@example.com"
+            >
+              hello@example.com
+            </a>
+            <p className="max-w-md text-sm font-semibold leading-6 text-white/50">
+              Replace the email, project details, and case studies with
+              Blessing&apos;s real information when ready.
+            </p>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
