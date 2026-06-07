@@ -84,7 +84,7 @@ export default function Home() {
 
           <div className="space-y-8">
             <h1 className="max-w-full text-[clamp(3.15rem,10vw,8.2rem)] font-black leading-[0.88] tracking-tight lg:max-w-5xl">
-              {["Building", "polished", "digital", "products", "for", "ambitious", "brands."].map(
+              {["Creative", "director", "and", "product", "developer."].map(
                 (word) => (
                   <span className="block lg:inline" key={word}>
                     {word}{" "}
@@ -94,8 +94,8 @@ export default function Home() {
             </h1>
             <div className="grid gap-7 border-t border-black/15 pt-7 md:grid-cols-[0.85fr_1fr]">
               <p className="max-w-full text-xl font-semibold leading-8 text-black/70">
-                I help founders and teams design and ship fast, thoughtful web
-                experiences.
+                25+ years across print, digital media, UX, communication
+                design, art direction, and product design.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row md:justify-end">
                 <a
@@ -164,11 +164,11 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <h2 className="max-w-3xl text-5xl font-black tracking-tight sm:text-7xl">
-              Work with momentum.
+              Selected case studies.
             </h2>
             <p className="max-w-sm text-base font-semibold leading-7 text-black/60">
-              A portfolio structure for showing the thinking, craft, and
-              results behind each launch.
+              Real portfolio work spanning enterprise SaaS, mobile media, and
+              Pan-African event ecosystems.
             </p>
           </div>
           <div className="grid gap-5">
@@ -178,18 +178,18 @@ export default function Home() {
                 className="group grid gap-6 rounded-lg border border-black/10 bg-[#f6f6ef] p-4 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 md:grid-cols-[0.85fr_1fr_0.2fr] md:items-center"
                 key={project.title}
               >
-                <div
-                  className={`${project.accent} min-h-64 rounded-md p-5 text-black`}
-                >
-                  <p className="text-sm font-black uppercase tracking-[0.16em]">
+                <div className="relative min-h-64 overflow-hidden rounded-md bg-black text-white">
+                  <Image
+                    alt={`${project.title} case study preview`}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    fill
+                    sizes="(min-width: 768px) 32vw, 100vw"
+                    src={project.image}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/10" />
+                  <p className="absolute bottom-5 left-5 right-5 text-sm font-black uppercase tracking-[0.16em]">
                     {project.type}
                   </p>
-                  <div className="mt-24 h-16 rounded-md border-2 border-black/20 bg-white/55" />
-                  <div className="mt-3 grid grid-cols-3 gap-3">
-                    <span className="h-8 rounded bg-black/10" />
-                    <span className="h-8 rounded bg-black/10" />
-                    <span className="h-8 rounded bg-black/10" />
-                  </div>
                 </div>
                 <div>
                   <p className="font-mono text-sm text-black/50">

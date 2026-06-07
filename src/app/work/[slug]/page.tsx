@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProject, projects } from "@/lib/projects";
@@ -75,33 +76,34 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </div>
 
-        <div
-          className="overflow-hidden rounded-lg border border-black/10 p-5 shadow-2xl shadow-black/10"
-          style={{ backgroundColor: project.accentHex }}
-        >
-          <div className="flex items-center justify-between text-xs font-black uppercase tracking-[0.18em]">
+        <div className="overflow-hidden rounded-lg border border-black/10 bg-black p-5 shadow-2xl shadow-black/10">
+          <div
+            className="flex items-center justify-between rounded-md px-4 py-3 text-xs font-black uppercase tracking-[0.18em]"
+            style={{ backgroundColor: project.accentHex }}
+          >
             <span>Case study preview</span>
             <span>{project.timeline}</span>
           </div>
-          <div className="mt-24 rounded-lg bg-[#101010] p-5 text-white">
-            <div className="grid gap-4 sm:grid-cols-3">
+          <div className="relative mt-5 min-h-[420px] overflow-hidden rounded-lg bg-[#101010]">
+            <Image
+              alt={`${project.title} portfolio case study visual`}
+              className="h-full w-full object-cover"
+              fill
+              priority
+              sizes="(min-width: 1024px) 48vw, 100vw"
+              src={project.image}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/10" />
+            <div className="absolute bottom-5 left-5 right-5 grid gap-4 sm:grid-cols-3">
               {project.metrics.map((metric) => (
                 <div
-                  className="rounded-md border border-white/10 bg-white/[0.08] p-4"
+                  className="rounded-md border border-white/10 bg-black/65 p-4 text-white backdrop-blur"
                   key={metric.label}
                 >
-                  <p className="text-sm text-white/55">{metric.label}</p>
-                  <p className="mt-8 text-4xl font-black">{metric.value}</p>
+                  <p className="text-sm text-white/60">{metric.label}</p>
+                  <p className="mt-8 text-3xl font-black">{metric.value}</p>
                 </div>
               ))}
-            </div>
-            <div className="mt-6 h-44 rounded-md border border-white/10 bg-white/[0.08] p-4">
-              <div className="h-14 rounded bg-white/15" />
-              <div className="mt-4 grid grid-cols-3 gap-3">
-                <span className="h-12 rounded bg-white/10" />
-                <span className="h-12 rounded bg-white/10" />
-                <span className="h-12 rounded bg-white/10" />
-              </div>
             </div>
           </div>
         </div>
@@ -131,7 +133,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <section className="bg-black px-5 py-24 text-white sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <h2 className="max-w-4xl text-5xl font-black tracking-tight sm:text-7xl">
-            Highlights from the dummy build.
+            Highlights from the work.
           </h2>
           <div className="mt-12 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 lg:grid-cols-3">
             {project.highlights.map((highlight, index) => (

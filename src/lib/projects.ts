@@ -6,6 +6,7 @@ export type Project = {
   summary: string;
   accent: string;
   accentHex: string;
+  image: string;
   scope: string[];
   timeline: string;
   role: string;
@@ -21,90 +22,111 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "pixy-livex",
-    title: "Pixy LiveX",
-    type: "Streaming product",
+    slug: "mineval-wizard",
+    title: "Mineval Wizard",
+    type: "Enterprise SaaS",
     year: "2026",
     summary:
-      "A polished live-commerce experience with creator tools, audience flows, and responsive product moments.",
-    accent: "bg-lime-300",
-    accentHex: "#bef264",
-    scope: ["Product strategy", "UX design", "Next.js build"],
-    timeline: "4 weeks",
-    role: "Product designer and frontend developer",
+      "A conceptual enterprise SaaS platform transforming geological and commodity data into investor-ready mining valuations.",
+    accent: "bg-[#d9a15f]",
+    accentHex: "#d9a15f",
+    image: "/images/case-studies/mineval-wizard.webp",
+    scope: [
+      "Product strategy",
+      "UX architecture",
+      "Dashboard UX",
+      "Design system",
+      "SaaS product thinking",
+    ],
+    timeline: "Concept case study",
+    role: "Lead Product Designer & UX Strategist",
     challenge:
-      "Live shopping experiences can become noisy fast. The dummy brief was to make streaming, chat, products, and creator controls feel focused on one clear conversion path.",
+      "Mining valuation workflows are often fragmented, spreadsheet-heavy, and hard for investors and decision-makers to interpret. Existing tools prioritise technical outputs over usability, collaboration, and strategic insight.",
     approach:
-      "The system uses a dark studio-style control surface, high-contrast product moments, and simple audience actions that stay visible across desktop and mobile.",
+      "The platform direction simplified resource modelling into a modern enterprise experience: valuation workflows, comparable databases, scenario planning, reports, settings, mobile access, and a premium interface system.",
     outcome:
-      "A launch-ready product direction with a confident interface, stronger product visibility, and a reusable layout model for future creator campaigns.",
+      "A clear product vision for a trusted valuation platform that helps mining companies, investors, banks, and government stakeholders move from raw geological data to decision-ready insight.",
     metrics: [
-      { label: "Prototype score", value: "94%" },
-      { label: "Core screens", value: "18" },
-      { label: "Launch window", value: "4w" },
+      { label: "Domain", value: "SaaS" },
+      { label: "Focus", value: "UX" },
+      { label: "Screens", value: "18+" },
     ],
     highlights: [
-      "Creator dashboard with live status, product pins, and stream controls.",
-      "Audience-first shopping flow built around quick product inspection.",
-      "Reusable responsive components for future campaign pages.",
+      "Investor-ready valuation workflows for complex geological and commodity data.",
+      "Dashboard, comparable database, scenario, report, and mobile access patterns.",
+      "Premium enterprise interface direction for mining and financial stakeholders.",
     ],
   },
   {
-    slug: "social-pixy-korner",
-    title: "Social Pixy Korner",
-    type: "Brand platform",
+    slug: "inafrica-network",
+    title: "InAfrica Network",
+    type: "Mobile media platform",
     year: "2025",
     summary:
-      "A social-first commerce identity and web presence built for clarity, speed, and conversion.",
-    accent: "bg-sky-300",
-    accentHex: "#7dd3fc",
-    scope: ["Brand system", "Landing page", "Content structure"],
-    timeline: "3 weeks",
-    role: "Visual designer and frontend developer",
+      "A mobile-first African news and social video experience where the continent's stories move markets.",
+    accent: "bg-[#d36a38]",
+    accentHex: "#d36a38",
+    image: "/images/case-studies/inafrica-network.webp",
+    scope: [
+      "Platform UX",
+      "Community workflows",
+      "Mobile UI",
+      "Design system",
+      "Engagement strategy",
+    ],
+    timeline: "Product concept",
+    role: "Lead Product Designer & UX Strategist",
     challenge:
-      "The dummy brand needed a digital home that could explain its offer quickly while still feeling energetic, social, and commercially sharp.",
+      "The platform needed to combine trusted news, social video, community participation, and market relevance without overwhelming users on mobile.",
     approach:
-      "The concept pairs crisp editorial typography with modular content bands for services, social proof, campaign examples, and contact prompts.",
+      "The experience uses a simple mobile information architecture: onboarding, personalised news, topic filters, short-form video, comments, creator actions, and share-first engagement loops.",
     outcome:
-      "A flexible brand platform structure that can support campaign pages, social content, and lightweight ecommerce storytelling.",
+      "A focused product direction for an African media network that can support editorial content, social interaction, and audience growth from a single mobile-first system.",
     metrics: [
-      { label: "Brand modules", value: "12" },
-      { label: "Page speed target", value: "90+" },
-      { label: "Content lanes", value: "5" },
+      { label: "Platform", value: "Mobile" },
+      { label: "Focus", value: "Media" },
+      { label: "Flows", value: "5" },
     ],
     highlights: [
-      "Clear hierarchy for offer, services, proof, and conversion.",
-      "Reusable campaign blocks for social and commerce promotions.",
-      "A bright visual language that stays readable and practical.",
+      "Mobile news, creator, and short-form video journeys for African audiences.",
+      "Community and engagement workflows shaped around comments, follows, and sharing.",
+      "A brandable interface system for future content and market expansion.",
     ],
   },
   {
-    slug: "portfolio-system",
-    title: "Portfolio System",
-    type: "Personal OS",
-    year: "2026",
+    slug: "iatf-2018",
+    title: "IATF2018",
+    type: "Pan-African trade ecosystem",
+    year: "2018",
     summary:
-      "A flexible digital home for case studies, writing, experiments, and long-term professional growth.",
-    accent: "bg-fuchsia-300",
-    accentHex: "#f0abfc",
-    scope: ["Information architecture", "Design system", "Case studies"],
-    timeline: "2 weeks",
-    role: "Designer and full-stack portfolio builder",
+      "A large-scale Pan-African trade fair ecosystem combining branding, event management, digital experiences, exhibition environments, PR, and registration.",
+    accent: "bg-[#e3294f]",
+    accentHex: "#e3294f",
+    image: "/images/case-studies/iatf-2018.webp",
+    scope: [
+      "Strategic leadership",
+      "Brand development",
+      "Creative direction",
+      "Event experience",
+      "Stakeholder engagement",
+    ],
+    timeline: "Continental launch",
+    role: "CEO of Pixykorner | Lead Strategic & Creative Director",
     challenge:
-      "The dummy goal was to turn a simple portfolio into a durable system that can grow with new projects, services, writing, and proof.",
+      "Africa's trade ecosystem was fragmented, with limited platforms capable of connecting businesses, governments, investors, and trade stakeholders at continental scale.",
     approach:
-      "The structure separates work, process, services, and contact into strong sections while using shared project data for scalable case-study pages.",
+      "Through Pixykorner, Blessing led an integrated event and experience ecosystem spanning brand development, communications, exhibition design, digital engagement, registration, and production oversight.",
     outcome:
-      "A portfolio foundation that feels distinctive on day one and can expand into richer case studies without redesigning from scratch.",
+      "A world-class trade fair experience that elevated Africa's trade visibility, improved exhibitor and delegate engagement, supported business networking, and helped position Africa as a competitive global trade ecosystem.",
     metrics: [
-      { label: "Reusable routes", value: "3" },
-      { label: "Sections", value: "7" },
-      { label: "Content model", value: "1" },
+      { label: "Scale", value: "Pan-African" },
+      { label: "Role", value: "Lead" },
+      { label: "Year", value: "2018" },
     ],
     highlights: [
-      "Shared project data powers homepage cards and individual pages.",
-      "Bold first impression inspired by premium independent portfolios.",
-      "Room for future writing, testimonials, and deeper project galleries.",
+      "Large-scale continental initiative for governments, financial institutions, corporates, SMEs, and trade organisations.",
+      "Integrated brand, communications, digital, physical, exhibition, and registration systems.",
+      "Strategic creative leadership across event planning, stakeholder engagement, and production oversight.",
     ],
   },
 ];
