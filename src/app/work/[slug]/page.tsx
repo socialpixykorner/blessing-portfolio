@@ -43,7 +43,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <main className="min-h-screen overflow-x-hidden bg-[#f6f6ef] text-[#111111]">
       <header className="border-b border-black/10 bg-[#f6f6ef]">
         <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
-          <Link className="text-base font-black tracking-tight" href="/#top">
+          <Link className="text-base font-bold tracking-tight" href="/#top">
             Blessing
           </Link>
           <Link
@@ -58,16 +58,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <section className="mx-auto grid w-full max-w-7xl gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[0.95fr_1.05fr] lg:px-10">
         <div className="flex min-h-[560px] flex-col justify-between">
           <div className="flex flex-wrap gap-3">
-            <span className="rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-black">
+            <span className="rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-bold">
               {project.type}
             </span>
-            <span className="rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-black">
+            <span className="rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-bold">
               {project.year}
             </span>
           </div>
 
           <div className="space-y-8">
-            <h1 className="text-[clamp(4rem,12vw,10rem)] font-black leading-[0.86] tracking-tight">
+            <h1 className="text-[clamp(4rem,12vw,10rem)] font-bold leading-[0.86] tracking-tight">
               {project.title}
             </h1>
             <p className="max-w-2xl border-t border-black/15 pt-7 text-2xl font-semibold leading-9 text-black/68">
@@ -78,7 +78,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         <div className="overflow-hidden rounded-lg border border-black/10 bg-black p-5 shadow-2xl shadow-black/10">
           <div
-            className="flex items-center justify-between rounded-md px-4 py-3 text-xs font-black uppercase tracking-[0.18em]"
+            className="flex items-center justify-between rounded-md px-4 py-3 text-xs font-bold uppercase tracking-[0.18em]"
             style={{ backgroundColor: project.accentHex }}
           >
             <span>Case study preview</span>
@@ -101,7 +101,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   key={metric.label}
                 >
                   <p className="text-sm text-white/60">{metric.label}</p>
-                  <p className="mt-8 text-3xl font-black">{metric.value}</p>
+                  <p className="mt-8 text-3xl font-bold">{metric.value}</p>
                 </div>
               ))}
             </div>
@@ -119,7 +119,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       <section className="px-5 py-24 sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-          <h2 className="text-5xl font-black tracking-tight sm:text-7xl">
+          <h2 className="text-5xl font-bold tracking-tight sm:text-7xl">
             What the project needed.
           </h2>
           <div className="grid gap-4">
@@ -132,16 +132,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       <section className="bg-black px-5 py-24 text-white sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <h2 className="max-w-4xl text-5xl font-black tracking-tight sm:text-7xl">
+          <h2 className="max-w-4xl text-5xl font-bold tracking-tight sm:text-7xl">
             Highlights from the work.
           </h2>
           <div className="mt-12 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 lg:grid-cols-3">
             {project.highlights.map((highlight, index) => (
               <article className="bg-black p-8" key={highlight}>
-                <p className="font-mono text-sm font-black text-lime-300">
-                  0{index + 1}
-                </p>
-                <p className="mt-6 text-2xl font-black leading-snug">
+                <p className="text-sm font-bold text-lime-300">0{index + 1}</p>
+                <p className="mt-6 text-2xl font-bold leading-snug">
                   {highlight}
                 </p>
               </article>
@@ -152,11 +150,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       <section className="px-5 py-20 sm:px-8 lg:px-10">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 rounded-lg bg-lime-300 p-8 md:flex-row md:items-center">
-          <h2 className="max-w-3xl text-4xl font-black tracking-tight sm:text-6xl">
+          <h2 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
             Like this direction? Let&apos;s shape the next project.
           </h2>
           <a
-            className="inline-flex h-14 w-fit items-center justify-center rounded-full bg-black px-7 text-sm font-black text-white transition hover:bg-white hover:text-black"
+            className="inline-flex h-14 w-fit items-center justify-center rounded-full bg-black px-7 text-sm font-bold text-white transition hover:bg-white hover:text-black"
             href="mailto:hello@example.com"
           >
             Start a project
@@ -170,10 +168,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 function InfoCard({ label, value }: { label: string; value: string }) {
   return (
     <article className="rounded-lg border border-black/10 bg-[#f6f6ef] p-6">
-      <p className="font-mono text-sm font-black uppercase tracking-[0.18em] text-black/45">
+      <p className="text-sm font-bold uppercase tracking-[0.18em] text-black/45">
         {label}
       </p>
-      <p className="mt-6 text-2xl font-black leading-tight">{value}</p>
+      <p className="mt-6 text-2xl font-bold leading-tight">{value}</p>
     </article>
   );
 }
@@ -181,10 +179,10 @@ function InfoCard({ label, value }: { label: string; value: string }) {
 function StoryBlock({ title, body }: { title: string; body: string }) {
   return (
     <article className="rounded-lg border border-black/10 bg-white p-7">
-      <p className="font-mono text-sm font-black uppercase tracking-[0.18em] text-lime-700">
+      <p className="text-sm font-bold uppercase tracking-[0.18em] text-lime-700">
         {title}
       </p>
-      <p className="mt-5 text-2xl font-black leading-snug text-black/85">
+      <p className="mt-5 text-2xl font-bold leading-snug text-black/85">
         {body}
       </p>
     </article>
