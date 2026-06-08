@@ -66,7 +66,7 @@ export const projects: Project[] = [
       "A mobile-first African news and social video experience where the continent's stories move markets.",
     accent: "bg-[#d36a38]",
     accentHex: "#d36a38",
-    image: "/images/case-studies/inafrica-network.webp",
+    image: "/images/case-studies/inafrica-network-full.jpg",
     scope: [
       "Platform UX",
       "Community workflows",
