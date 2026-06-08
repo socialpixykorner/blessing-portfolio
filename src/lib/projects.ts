@@ -102,7 +102,7 @@ export const projects: Project[] = [
       "A large-scale Pan-African trade fair ecosystem combining branding, event management, digital experiences, exhibition environments, PR, and registration.",
     accent: "bg-[#e3294f]",
     accentHex: "#e3294f",
-    image: "/images/case-studies/iatf-2018.webp",
+    image: "/images/case-studies/iatf-2018-full.png",
     scope: [
       "Strategic leadership",
       "Brand development",
