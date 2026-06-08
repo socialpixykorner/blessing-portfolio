@@ -182,7 +182,7 @@ function StoryBlock({ title, body }: { title: string; body: string }) {
       <p className="text-sm font-bold uppercase tracking-[0.18em] text-lime-700">
         {title}
       </p>
-      <p className="mt-5 text-2xl font-bold leading-snug text-black/85">
+      <p className="mt-5 text-xl font-normal leading-8 text-black/65 sm:text-2xl sm:leading-9">
         {body}
       </p>
     </article>
