@@ -40,22 +40,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f6f6ef] text-[#111111]">
-      <header className="border-b border-black/10 bg-[#f6f6ef]">
+    <main className="case-site min-h-screen overflow-x-hidden">
+      <header className="case-header">
         <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
-          <Link className="text-base font-bold tracking-tight" href="/#top">
-            Blessing
+          <Link className="wordmark" href="/#top" aria-label="Blessing, back to homepage">
+            BK<span className="accent">.</span>
           </Link>
           <Link
-            className="inline-flex h-10 items-center rounded-full border border-black/15 bg-white px-4 text-sm font-bold shadow-sm transition hover:bg-lime-300"
+            className="case-back"
             href="/#work"
           >
-            Back to work
+            ← Back to work
           </Link>
         </nav>
       </header>
 
-      <section className="mx-auto grid w-full max-w-7xl gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[0.95fr_1.05fr] lg:px-10">
+      <section className="case-hero mx-auto grid w-full max-w-7xl gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[0.95fr_1.05fr] lg:px-10">
         <div className="flex min-h-[560px] flex-col justify-between">
           <div className="flex flex-wrap gap-3">
             <span className="rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-bold">
@@ -76,7 +76,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-lg border border-black/10 bg-black p-5 shadow-2xl shadow-black/10">
+        <div className="case-visual overflow-hidden rounded-lg border border-black/10 bg-black p-5 shadow-2xl shadow-black/10">
           <div
             className="flex items-center justify-between rounded-md px-4 py-3 text-xs font-bold uppercase tracking-[0.18em]"
             style={{ backgroundColor: project.accentHex }}
@@ -93,8 +93,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               sizes="(min-width: 1024px) 48vw, 100vw"
               src={project.image}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/10" />
-            <div className="absolute bottom-5 left-5 right-5 grid gap-4 sm:grid-cols-3">
+            <div className="case-metrics absolute bottom-5 left-5 right-5 grid gap-4 sm:grid-cols-3">
               {project.metrics.map((metric) => (
                 <div
                   className="rounded-md border border-white/10 bg-black/65 p-4 text-white backdrop-blur"
@@ -109,7 +108,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
-      <section className="border-y border-black/10 bg-white px-5 py-20 sm:px-8 lg:px-10">
+      <section className="case-facts border-y border-black/10 bg-white px-5 py-20 sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3">
           <InfoCard label="Role" value={project.role} />
           <InfoCard label="Timeline" value={project.timeline} />
@@ -117,7 +116,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
-      <section className="px-5 py-24 sm:px-8 lg:px-10">
+      <section className="case-story px-5 py-24 sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <h2 className="text-5xl font-bold tracking-tight sm:text-7xl">
             What the project needed.
@@ -130,7 +129,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
-      <section className="bg-black px-5 py-24 text-white sm:px-8 lg:px-10">
+      <section className="case-highlights bg-black px-5 py-24 text-white sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <h2 className="max-w-4xl text-5xl font-bold tracking-tight sm:text-7xl">
             Highlights from the work.
@@ -148,7 +147,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-10">
+      <section className="case-cta px-5 py-20 sm:px-8 lg:px-10">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 rounded-lg bg-lime-300 p-8 md:flex-row md:items-center">
           <h2 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
             Like this direction? Let&apos;s shape the next project.

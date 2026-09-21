@@ -137,16 +137,17 @@ const projectTickerCards = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f6f6ef] text-[#111111]">
-      <header className="sticky top-0 z-50 border-b border-black/10 bg-[#f6f6ef]/90 backdrop-blur">
-        <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
-          <a className="text-base font-bold tracking-tight" href="#top">
-            Blessing
+    <main className="swiss-site min-h-screen overflow-x-hidden" id="top">
+      <header className="site-header sticky top-0 z-50">
+        <nav className="site-nav mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 sm:px-8 lg:px-10">
+          <a className="wordmark" href="#top" aria-label="Blessing, back to top">
+            BK<span className="accent">.</span>
           </a>
-          <div className="hidden items-center gap-7 text-sm font-semibold md:flex">
+          <span className="nav-descriptor">Blessing Katsidzira<br />Independent creative practice</span>
+          <div className="nav-links hidden items-center gap-7 text-sm font-semibold md:flex">
             {["Work", "Services", "Process", "Contact"].map((item) => (
               <a
-                className="transition hover:text-lime-700"
+                className="transition hover:text-red-700"
                 href={`#${item.toLowerCase()}`}
                 key={item}
               >
@@ -155,99 +156,21 @@ export default function Home() {
             ))}
           </div>
           <a
-            className="inline-flex h-10 shrink-0 items-center rounded-full border border-black/15 bg-white px-3 text-xs font-bold shadow-sm transition hover:bg-lime-300 sm:px-4 sm:text-sm"
+            className="nav-contact"
             href="mailto:hello@example.com"
           >
-            <span className="sm:hidden">Start</span>
-            <span className="hidden sm:inline">Start a project</span>
+            <span>Let&apos;s talk</span><span aria-hidden="true">↗</span>
           </a>
         </nav>
       </header>
 
-      <section
-        className="mx-auto grid w-full max-w-7xl min-w-0 gap-12 px-5 pb-20 pt-16 sm:px-8 sm:pt-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-10"
-        id="top"
-      >
-        <div className="flex min-h-[620px] min-w-0 flex-col justify-between">
-          <div className="flex w-fit items-center gap-3 rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-bold shadow-sm">
-            <span className="h-2.5 w-2.5 rounded-full bg-lime-400" />
-            Available for select projects
-          </div>
-
-          <div className="space-y-8">
-            <h1 className="max-w-full text-[clamp(3.15rem,10vw,8.2rem)] font-bold leading-[0.88] tracking-tight lg:max-w-5xl">
-              {["Creative", "director", "and", "product", "developer."].map(
-                (word) => (
-                  <span className="block lg:inline" key={word}>
-                    {word}{" "}
-                  </span>
-                ),
-              )}
-            </h1>
-            <div className="grid gap-7 border-t border-black/15 pt-7 md:grid-cols-[0.85fr_1fr]">
-              <p className="max-w-full text-xl font-semibold leading-8 text-black/70">
-                25+ years across print, digital media, UX, communication design,
-                art direction, and product design.
-              </p>
-              <div className="flex flex-col gap-3 sm:flex-row md:justify-end">
-                <a
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-black px-6 text-sm font-bold text-white transition hover:bg-lime-700"
-                  href="#work"
-                >
-                  View work
-                </a>
-                <a
-                  className="inline-flex h-12 items-center justify-center rounded-full border border-black/15 bg-white px-6 text-sm font-bold transition hover:bg-lime-300"
-                  href="#contact"
-                >
-                  Start a project
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="relative flex min-h-[620px] min-w-0 flex-col overflow-hidden rounded-lg bg-[#101010] p-5 text-white shadow-2xl shadow-black/20">
-          <Image
-            alt="Blessing Katsidzira portrait behind dark vertical panels"
-            className="absolute inset-0 h-full w-full object-cover object-center"
-            fill
-            priority
-            sizes="(min-width: 1024px) 46vw, 100vw"
-            src="/images/bk-back.png"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/5 to-black/78" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-transparent to-black/20" />
-
-          <div className="relative flex items-center justify-between border-b border-white/10 pb-4 text-xs font-bold uppercase tracking-[0.18em] text-white/65">
-            <span>Portrait system</span>
-            <span>BK</span>
-          </div>
-          <div className="relative grid flex-1 content-between gap-5 pt-8">
-            <div className="max-w-xs rounded-md border border-white/10 bg-black/50 p-5 backdrop-blur">
-              <p className="text-sm font-bold uppercase tracking-[0.16em] text-lime-300">
-                Focus
-              </p>
-              <p className="mt-10 text-5xl font-bold leading-none tracking-tight">
-                Design. Build. Launch.
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-3">
-              {["Product design", "Web builds", "Brand systems"].map(
-                (item, index) => (
-                  <div
-                    className="rounded-md border border-white/10 bg-black/55 px-4 py-4 backdrop-blur"
-                    key={item}
-                  >
-                    <p className="text-sm font-semibold text-white">{item}</p>
-                    <p className="mt-8 text-sm text-lime-300">0{index + 1}</p>
-                  </div>
-                ),
-              )}
-            </div>
-          </div>
-        </div>
+      <section className="swiss-hero mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
+        <div className="hero-meta"><span>Portfolio / 2026</span><span>Creative direction · Product · Digital</span><span>01 — Introduction</span></div>
+        <div className="hero-center"><div className="hero-intro-line"><p className="hero-name">Blessing Katsidzira</p><p className="hero-status"><span />Available for select projects</p></div><h1>Creative direction<br /><span>&amp; product</span><br />development<span className="accent">.</span></h1></div>
+        <div className="hero-base"><div className="hero-description"><span>01 / 05</span><p>Designing thoughtful digital products and identities with clarity, purpose, and a point of view.</p></div><div className="hero-links"><a href="#work">Explore selected work ↘</a><a href="#contact">Start a conversation ↗</a></div></div>
       </section>
+
+      <section className="portrait-band"><div className="portrait-inner mx-auto max-w-7xl px-5 sm:px-8 lg:px-10"><div className="portrait-text"><span>The person behind the work</span><p>25+ years across print, digital media, UX, communication design, art direction, and product design.</p><span>B / K — Johannesburg, South Africa</span></div><div className="portrait-photo"><Image alt="Blessing Katsidzira portrait" className="object-cover object-center grayscale" fill priority sizes="(min-width: 768px) 60vw, 100vw" src="/images/bk-back.png" /></div></div></section>
 
       <section className="border-y border-black/10 bg-[#f6f6ef] py-10">
         <div className="mx-auto flex max-w-7xl min-w-0 flex-col gap-6 overflow-hidden px-5 sm:px-8 lg:px-10">
