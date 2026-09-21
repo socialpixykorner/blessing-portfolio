@@ -137,7 +137,7 @@ const projectTickerCards = [
 
 export default function Home() {
   return (
-    <main className="swiss-site min-h-screen overflow-x-hidden" id="top">
+    <main className="swiss-site min-h-screen overflow-x-clip" id="top">
       <header className="site-header sticky top-0 z-50">
         <nav className="site-nav mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 sm:px-8 lg:px-10">
           <a className="wordmark" href="#top" aria-label="Tongwara Blessing Katsidzira, back to top">

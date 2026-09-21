@@ -40,8 +40,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <main className="case-site min-h-screen overflow-x-hidden">
-      <header className="case-header">
+    <main className="case-site min-h-screen overflow-x-clip">
+      <header className="case-header sticky top-0 z-50">
         <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
           <Link className="wordmark" href="/#top" aria-label="Tongwara Blessing Katsidzira, back to homepage">
             BK<span className="accent">.</span>
