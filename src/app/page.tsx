@@ -140,10 +140,10 @@ export default function Home() {
     <main className="swiss-site min-h-screen overflow-x-hidden" id="top">
       <header className="site-header sticky top-0 z-50">
         <nav className="site-nav mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 sm:px-8 lg:px-10">
-          <a className="wordmark" href="#top" aria-label="Blessing, back to top">
+          <a className="wordmark" href="#top" aria-label="Tongwara Blessing Katsidzira, back to top">
             BK<span className="accent">.</span>
           </a>
-          <span className="nav-descriptor">Blessing Katsidzira<br />Independent creative practice</span>
+          <span className="nav-descriptor">Tongwara Blessing Katsidzira<br />Independent creative practice</span>
           <div className="nav-links hidden items-center gap-7 text-sm font-semibold md:flex">
             {["Work", "Services", "Process", "Contact"].map((item) => (
               <a
@@ -166,11 +166,11 @@ export default function Home() {
 
       <section className="swiss-hero mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="hero-meta"><span>Portfolio / 2026</span><span>Creative direction · Product · Digital</span><span>01 — Introduction</span></div>
-        <div className="hero-center"><div className="hero-intro-line"><p className="hero-name">Blessing Katsidzira</p><p className="hero-status"><span />Available for select projects</p></div><h1>Creative direction<br /><span>&amp; product</span><br />development<span className="accent">.</span></h1></div>
+        <div className="hero-center"><div className="hero-intro-line"><p className="hero-name">Tongwara Blessing Katsidzira</p><p className="hero-status"><span />Available for select projects</p></div><h1>Creative direction<br /><span>&amp; product</span><br />development<span className="accent">.</span></h1></div>
         <div className="hero-base"><div className="hero-description"><span>01 / 05</span><p>Designing thoughtful digital products and identities with clarity, purpose, and a point of view.</p></div><div className="hero-links"><a href="#work">Explore selected work ↘</a><a href="#contact">Start a conversation ↗</a></div></div>
       </section>
 
-      <section className="portrait-band"><div className="portrait-inner mx-auto max-w-7xl px-5 sm:px-8 lg:px-10"><div className="portrait-text"><span>The person behind the work</span><p>25+ years across print, digital media, UX, communication design, art direction, and product design.</p><span>B / K — Johannesburg, South Africa</span></div><div className="portrait-photo"><Image alt="Blessing Katsidzira portrait" className="object-cover object-center grayscale" fill priority sizes="(min-width: 768px) 60vw, 100vw" src="/images/bk-back.png" /></div></div></section>
+      <section className="portrait-band"><div className="portrait-inner mx-auto max-w-7xl px-5 sm:px-8 lg:px-10"><div className="portrait-text"><span>The person behind the work</span><p>25+ years across print, digital media, UX, communication design, art direction, and product design.</p><span>T / B / K — Johannesburg, South Africa</span></div><div className="portrait-photo"><Image alt="Portrait of Tongwara Blessing Katsidzira" className="object-cover object-center grayscale" fill priority sizes="(min-width: 768px) 60vw, 100vw" src="/images/bk-back.png" /></div></div></section>
 
       <section className="border-y border-black/10 bg-[#f6f6ef] py-10">
         <div className="mx-auto flex max-w-7xl min-w-0 flex-col gap-6 overflow-hidden px-5 sm:px-8 lg:px-10">

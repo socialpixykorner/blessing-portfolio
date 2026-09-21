@@ -21,12 +21,12 @@ export async function generateMetadata({ params }: ProjectPageProps) {
 
   if (!project) {
     return {
-      title: "Project not found | Blessing Katsidzira",
+      title: "Project not found | Tongwara Blessing Katsidzira",
     };
   }
 
   return {
-    title: `${project.title} | Blessing Katsidzira`,
+    title: `${project.title} | Tongwara Blessing Katsidzira`,
     description: project.summary,
   };
 }
@@ -43,7 +43,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <main className="case-site min-h-screen overflow-x-hidden">
       <header className="case-header">
         <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
-          <Link className="wordmark" href="/#top" aria-label="Blessing, back to homepage">
+          <Link className="wordmark" href="/#top" aria-label="Tongwara Blessing Katsidzira, back to homepage">
             BK<span className="accent">.</span>
           </Link>
           <Link

@@ -115,7 +115,7 @@ export const projects: Project[] = [
     challenge:
       "Africa's trade ecosystem was fragmented, with limited platforms capable of connecting businesses, governments, investors, and trade stakeholders at continental scale.",
     approach:
-      "Through Pixykorner, Blessing led an integrated event and experience ecosystem spanning brand development, communications, exhibition design, digital engagement, registration, and production oversight.",
+      "Through Pixykorner, Tongwara Blessing Katsidzira led an integrated event and experience ecosystem spanning brand development, communications, exhibition design, digital engagement, registration, and production oversight.",
     outcome:
       "A world-class trade fair experience that elevated Africa's trade visibility, improved exhibitor and delegate engagement, supported business networking, and helped position Africa as a competitive global trade ecosystem.",
     metrics: [

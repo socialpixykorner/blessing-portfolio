@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Blessing Katsidzira | Portfolio",
+  title: "Tongwara Blessing Katsidzira | Portfolio",
   description:
-    "A bold portfolio for Blessing Katsidzira, focused on product design, web development, and brand systems.",
+    "The portfolio of Tongwara Blessing Katsidzira, focused on product design, web development, and brand systems.",
 };
 
 export default function RootLayout({
