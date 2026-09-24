@@ -42,17 +42,17 @@ const faqs = [
   {
     question: "What kind of projects does Blessing take on?",
     answer:
-      "I partner with organisations that need more than decoration: a clear idea, a strong identity, and a digital experience that works. My projects include brand systems, campaigns, publication design, UX/UI, websites, and digital products, with every engagement shaped around a real business or communication goal.",
+      "I partner with organisations that need more than aesthetics: a sharp strategic idea, a distinctive identity, and a digital experience that performs. My practice spans brand systems, campaigns, publication design, UX/UI, websites, and digital products, each engagement anchored in a concrete business or communication objective.",
   },
   {
     question: "How will the work support my business after launch?",
     answer:
-      "I design brands and digital platforms as flexible systems rather than one-off deliverables. Your team receives a clear foundation that can support new services, campaigns, content, and customer journeys without losing consistency or requiring a complete redesign as the organisation grows.",
+      "I design brands and digital platforms as enduring systems, built to evolve alongside your organisation. The result is a coherent foundation that enables your team to introduce new services, campaigns, content, and customer experiences while preserving clarity, consistency, and strategic intent.",
   },
   {
     question: "What is it like to work directly with Blessing?",
     answer:
-      "You work directly with a senior creative from the first conversation through delivery. I bring strategy, brand thinking, user experience, and execution into one focused process, communicate clearly, and involve you at the decisions that matter so the final work feels distinctive, practical, and true to your organisation.",
+      "You work directly with me from the initial conversation through to delivery, with senior creative oversight at every stage. I unite strategy, brand thinking, user experience, and execution within a focused, transparent process, involving you in the decisions that matter while protecting the clarity and integrity of the final outcome.",
   },
 ];
 
