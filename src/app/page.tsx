@@ -42,17 +42,17 @@ const faqs = [
   {
     question: "What kind of projects does Blessing take on?",
     answer:
-      "Portfolio sites, landing pages, SaaS interfaces, product refreshes, and brand-led web experiences.",
+      "I partner with organisations that need more than decoration: a clear idea, a strong identity, and a digital experience that works. My projects include brand systems, campaigns, publication design, UX/UI, websites, and digital products, with every engagement shaped around a real business or communication goal.",
   },
   {
-    question: "Can the site grow into case studies and a blog?",
+    question: "How will the work support my business after launch?",
     answer:
-      "Yes. This structure is ready for richer project pages, writing, testimonials, and contact flows.",
+      "I design brands and digital platforms as flexible systems rather than one-off deliverables. Your team receives a clear foundation that can support new services, campaigns, content, and customer journeys without losing consistency or requiring a complete redesign as the organisation grows.",
   },
   {
-    question: "Is this ready to customize?",
+    question: "What is it like to work directly with Blessing?",
     answer:
-      "Yes. The layout, sections, and copy are in place so the next step is swapping in real work and details.",
+      "You work directly with a senior creative from the first conversation through delivery. I bring strategy, brand thinking, user experience, and execution into one focused process, communicate clearly, and involve you at the decisions that matter so the final work feels distinctive, practical, and true to your organisation.",
   },
 ];
 
