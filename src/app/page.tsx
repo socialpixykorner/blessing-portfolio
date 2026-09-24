@@ -152,13 +152,13 @@ const archiveTiles = [
     layout: "archive-tile--statement archive-tile--light",
   },
   {
-    title: "A continental stage",
-    category: "Brand experience",
-    year: "2018",
-    image: "/images/case-studies/iatf-2018.webp",
-    href: "/work/iatf-2018",
+    title: "Publication Systems",
+    category: "Editorial & print",
+    year: "1999—26",
+    image: "/images/case-studies/publications/aprm-yearbook.jpg",
+    href: "#archive",
     layout: "archive-tile--feature",
-    position: "center 45%",
+    position: "center center",
   },
 ];
 
