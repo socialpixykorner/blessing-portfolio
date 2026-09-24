@@ -12,7 +12,6 @@ import {
   siWordpress,
   type SimpleIcon,
 } from "simple-icons/icons";
-import { projects } from "@/lib/projects";
 
 const services = [
   {
@@ -76,62 +75,90 @@ const tools: {
   { name: "Next.js", icon: siNextdotjs },
 ];
 
-const projectTickerCards = [
+const archiveTiles = [
   {
-    title: "Solar Commerce",
-    category: "Web platform",
-    year: "2024",
-    descriptor: "Product pages, quoting flows, and responsive storefront UX.",
-    visual: "from-[#d9a15f] via-[#f6f6ef] to-[#53613a]",
+    title: "Minvanta",
+    category: "Brand & campaign",
+    year: "2026",
+    image: "/images/case-studies/minvanta/cover.png",
+    href: "/work/minvanta",
+    layout: "archive-tile--wide",
+    position: "center center",
   },
   {
-    title: "EventFlow",
-    category: "Registration",
-    year: "2023",
-    descriptor: "Ticketing journeys, attendee capture, and event dashboards.",
-    visual: "from-[#f6f6ef] via-[#d7e7dd] to-[#2f6f67]",
+    title: "Mineval Wizard",
+    category: "Enterprise SaaS",
+    year: "2026",
+    image: "/images/case-studies/mineval-cover-thumbnail.png",
+    href: "/work/mineval-wizard",
+    layout: "archive-tile--wide",
+    position: "center center",
   },
   {
-    title: "Market Pulse",
-    category: "Analytics",
-    year: "2022",
-    descriptor: "Executive reporting views for campaign and media performance.",
-    visual: "from-[#101010] via-[#2c2c2c] to-[#bef264]",
+    title: "InAfrica Network",
+    category: "Mobile media",
+    year: "2025",
+    image: "/images/case-studies/inafrica-network-full.jpg",
+    href: "/work/inafrica-network",
+    layout: "archive-tile--wide",
+    position: "center 38%",
   },
   {
-    title: "Foodline Africa",
-    category: "Ecommerce",
-    year: "2021",
-    descriptor: "Category landing pages, product cards, and checkout moments.",
-    visual: "from-[#e8b142] via-[#f6f6ef] to-[#cc3a2f]",
+    title: "Strategy into systems",
+    category: "Creative direction",
+    year: "1999—26",
+    href: "#archive",
+    layout: "archive-tile--statement archive-tile--red",
   },
   {
-    title: "Five-A-Side",
-    category: "Sports media",
-    year: "2020",
-    descriptor: "Campaign visuals, event pages, and fan engagement screens.",
-    visual: "from-[#101010] via-[#25331f] to-[#9ee633]",
-  },
-  {
-    title: "Civic Connect",
-    category: "Public sector",
-    year: "2019",
-    descriptor: "Service information architecture and stakeholder portals.",
-    visual: "from-[#f6f6ef] via-[#d8d9d2] to-[#55616d]",
-  },
-  {
-    title: "Trade Summit",
-    category: "Brand system",
+    title: "IATF2018",
+    category: "Trade ecosystem",
     year: "2018",
-    descriptor: "Identity, signage, communications, and digital touchpoints.",
-    visual: "from-[#e3294f] via-[#f6f6ef] to-[#101010]",
+    image: "/images/case-studies/iatf-2018-thumbnail.jpg",
+    href: "/work/iatf-2018",
+    layout: "archive-tile--standard",
+    position: "center 56%",
   },
   {
-    title: "Creator Desk",
-    category: "SaaS concept",
-    year: "2017",
-    descriptor: "Creator workflows, content planning, and dashboard patterns.",
-    visual: "from-[#111111] via-[#302620] to-[#d9a15f]",
+    title: "Product thinking",
+    category: "UX / UI",
+    year: "2026",
+    href: "/work/mineval-wizard",
+    layout: "archive-tile--standard archive-tile--dark",
+  },
+  {
+    title: "People Who Never Were",
+    category: "Constructed photography",
+    year: "2026",
+    image: "/images/case-studies/people-who-never-were/01-elder-portrait.png",
+    href: "/work/people-who-never-were",
+    layout: "archive-tile--standard",
+    position: "center 42%",
+  },
+  {
+    title: "Stories that move markets",
+    category: "Editorial product",
+    year: "2025",
+    image: "/images/case-studies/inafrica-network.webp",
+    href: "/work/inafrica-network",
+    layout: "archive-tile--wide",
+    position: "center center",
+  },
+  {
+    title: "Across disciplines",
+    category: "Brand / Digital / Space",
+    year: "25+ yrs",
+    href: "#services",
+    layout: "archive-tile--statement archive-tile--light",
+  },
+  {
+    title: "A continental stage",
+    category: "Brand experience",
+    year: "2018",
+    image: "/images/case-studies/iatf-2018.webp",
+    href: "/work/iatf-2018",
+    layout: "archive-tile--feature",
+    position: "center 45%",
   },
 ];
 
@@ -148,7 +175,7 @@ export default function Home() {
             {["Work", "Services", "Process", "Contact"].map((item) => (
               <a
                 className="transition hover:text-red-700"
-                href={`#${item.toLowerCase()}`}
+                href={item === "Work" ? "#archive" : `#${item.toLowerCase()}`}
                 key={item}
               >
                 {item}
@@ -167,7 +194,7 @@ export default function Home() {
       <section className="swiss-hero mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="hero-meta"><span>Portfolio / 2026</span><span>Creative direction · Product · Digital</span><span>01 — Introduction</span></div>
         <div className="hero-center"><div className="hero-intro-line"><p className="hero-name">Tongwara Blessing Katsidzira</p><p className="hero-status"><span />Available for select projects</p></div><h1>Creative direction<br /><span>&amp; product</span><br />development<span className="accent">.</span></h1></div>
-        <div className="hero-base"><div className="hero-description"><span>01 / 05</span><p>Designing thoughtful digital products and identities with clarity, purpose, and a point of view.</p></div><div className="hero-links"><a href="#work">Explore selected work ↘</a><a href="#contact">Start a conversation ↗</a></div></div>
+        <div className="hero-base"><div className="hero-description"><span>01 / 05</span><p>Designing thoughtful digital products and identities with clarity, purpose, and a point of view.</p></div><div className="hero-links"><a href="#archive">Explore selected work ↘</a><a href="#contact">Start a conversation ↗</a></div></div>
       </section>
 
       <section className="portrait-band"><div className="portrait-inner mx-auto max-w-7xl px-5 sm:px-8 lg:px-10"><div className="portrait-text"><span>The person behind the work</span><p>25+ years across print, digital media, UX, communication design, art direction, and product design.</p><span>TBK — Johannesburg, South Africa</span></div><div className="portrait-photo"><Image alt="Portrait of Tongwara Blessing Katsidzira" className="object-cover object-center grayscale" fill priority sizes="(min-width: 768px) 60vw, 100vw" src="/images/bk-back.png" /></div></div></section>
@@ -202,120 +229,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-label="Project archive ticker" className="bg-[#101010] py-8">
-        <div className="mx-auto flex max-w-7xl min-w-0 flex-col gap-5 overflow-hidden px-5 sm:px-8 lg:px-10">
-          <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/45">
-              Project archive
-            </p>
-            <p className="max-w-md text-sm font-medium leading-6 text-white/50">
-              A rolling snapshot of dummy project formats shaped over the
-              years.
-            </p>
-          </div>
-
-          <div className="project-card-marquee min-w-0 overflow-hidden">
-            <div className="project-marquee__track flex w-max gap-5">
-              {[...projectTickerCards, ...projectTickerCards].map(
-                (project, index) => (
-                  <article
-                    className="group w-[18.5rem] overflow-hidden rounded-lg border border-white/10 bg-[#f6f6ef] p-2 text-black shadow-2xl shadow-black/25 sm:w-[25rem]"
-                    key={`${project.title}-${index}`}
-                  >
-                    <div
-                      className={`relative h-28 overflow-hidden rounded-md bg-gradient-to-br ${project.visual} sm:h-36`}
-                    >
-                      <div className="absolute inset-x-4 top-4 h-3 rounded-full bg-white/70" />
-                      <div className="absolute bottom-4 left-4 right-4 grid grid-cols-[1.2fr_0.8fr] gap-3">
-                        <div className="space-y-2 rounded-md bg-white/75 p-3 shadow-sm">
-                          <div className="h-2 w-16 rounded-full bg-black/70" />
-                          <div className="h-2 w-24 rounded-full bg-black/20" />
-                          <div className="h-2 w-14 rounded-full bg-lime-500" />
-                        </div>
-                        <div className="grid gap-2">
-                          <span className="rounded-md bg-black/80" />
-                          <span className="rounded-md bg-white/55" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="grid gap-4 px-2 py-4 sm:grid-cols-[1fr_auto] sm:items-end">
-                      <div>
-                        <div className="flex items-center gap-2 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-black/45">
-                          <span>{project.category}</span>
-                          <span className="h-1.5 w-1.5 rounded-full bg-lime-500" />
-                          <span>{project.year}</span>
-                        </div>
-                        <h3 className="mt-2 text-2xl font-bold tracking-tight">
-                          {project.title}
-                        </h3>
-                        <p className="mt-2 max-w-sm text-sm font-medium leading-6 text-black/55">
-                          {project.descriptor}
-                        </p>
-                      </div>
-                      <span className="hidden h-10 w-10 items-center justify-center rounded-full border border-black/15 text-lg font-bold transition group-hover:bg-black group-hover:text-white sm:flex">
-                        ↗
-                      </span>
-                    </div>
-                  </article>
-                ),
-              )}
-            </div>
-          </div>
+      <section className="archive-section" id="archive" aria-labelledby="archive-title">
+        <div className="archive-heading mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <p className="archive-kicker">Selected archive / 1999—2026</p>
+          <h2 id="archive-title">A life in the work<span className="accent">.</span></h2>
+          <p className="archive-intro">
+            Brand systems, products, platforms, campaigns, and experiences
+            shaped across industries and over time.
+          </p>
         </div>
-      </section>
 
-      <section
-        className="border-y border-black/10 bg-white px-5 py-20 sm:px-8 lg:px-10"
-        id="work"
-      >
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <h2 className="max-w-3xl text-5xl font-bold tracking-tight sm:text-7xl">
-              Selected case studies.
-            </h2>
-            <p className="max-w-sm text-base font-semibold leading-7 text-black/60">
-              Real portfolio work spanning enterprise SaaS, mobile media, and
-              Pan-African event ecosystems.
-            </p>
-          </div>
-          <div className="grid gap-5">
-            {projects.map((project, index) => (
-              <Link
-                href={`/work/${project.slug}`}
-                className="group grid gap-6 rounded-lg border border-black/10 bg-[#f6f6ef] p-4 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 md:grid-cols-[0.85fr_1fr_0.2fr] md:items-center"
-                key={project.title}
-              >
-                <div className="relative min-h-64 overflow-hidden rounded-md bg-black text-white">
-                  <Image
-                    alt={`${project.title} case study preview`}
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    fill
-                    sizes="(min-width: 768px) 32vw, 100vw"
-                    src={project.image}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/10" />
-                  <p className="absolute bottom-5 left-5 right-5 text-sm font-bold uppercase tracking-[0.16em]">
-                    {project.type}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm text-black/50">
-                    0{index + 1} / {project.year}
-                  </p>
-                  <h3 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
-                    {project.title}
-                  </h3>
-                  <p className="mt-5 max-w-2xl text-lg leading-8 text-black/65">
-                    {project.summary}
-                  </p>
-                </div>
-                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-black/15 text-xl font-bold transition group-hover:bg-black group-hover:text-white">
-                  ↗
-                </span>
-              </Link>
-            ))}
-          </div>
+        <div className="archive-mosaic">
+          {archiveTiles.map((tile) => (
+            <Link
+              className={`archive-tile ${tile.layout}`}
+              href={tile.href}
+              key={tile.title}
+            >
+              {tile.image ? (
+                <Image
+                  alt=""
+                  aria-hidden="true"
+                  className="archive-image"
+                  fill
+                  sizes="(min-width: 900px) 34vw, (min-width: 600px) 50vw, 100vw"
+                  src={tile.image}
+                  style={{ objectPosition: tile.position }}
+                />
+              ) : null}
+              <span className="archive-shade" />
+              <span className="archive-meta">
+                <span>{tile.category}</span>
+                <span>{tile.year}</span>
+              </span>
+              <span className="archive-name">{tile.title}</span>
+              <span className="archive-arrow" aria-hidden="true">↗</span>
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -367,15 +317,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-black/10 bg-lime-300 px-5 py-20 sm:px-8 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
-          <p className="text-sm font-bold uppercase tracking-[0.18em]">
-            Client energy
-          </p>
-          <blockquote className="text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
-            “Blessing brings calm strategy, sharp visuals, and the kind of build
-            quality that makes a launch feel effortless.”
-          </blockquote>
+      <section className="client-energy">
+        <div className="client-energy-inner mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div className="client-energy-meta">
+            <p>Client energy</p>
+            <span>03 / Proof</span>
+          </div>
+          <div className="client-energy-content">
+            <blockquote>
+              Blessing brings calm strategy, sharp visuals, and the kind of
+              build quality that makes a launch feel <span>effortless.</span>”
+            </blockquote>
+            <div className="client-energy-signature">
+              <span>Client feedback</span>
+              <span>Strategy · Design · Delivery</span>
+            </div>
+          </div>
         </div>
       </section>
 

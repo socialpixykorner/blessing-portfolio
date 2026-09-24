@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { CSSProperties } from "react";
 import { getProject, projects } from "@/lib/projects";
 
 type ProjectPageProps = {
@@ -40,7 +41,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <main className="case-site min-h-screen overflow-x-clip">
+    <main className={`case-site case-site--${project.slug} min-h-screen overflow-x-clip`}>
       <header className="case-header sticky top-0 z-50">
         <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
           <Link className="wordmark" href="/#top" aria-label="Tongwara Blessing Katsidzira, back to homepage">
@@ -48,7 +49,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </Link>
           <Link
             className="case-back"
-            href="/#work"
+            href="/#archive"
           >
             ← Back to work
           </Link>
@@ -76,31 +77,30 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </div>
 
-        <div className="case-visual overflow-hidden rounded-lg border border-black/10 bg-black p-5 shadow-2xl shadow-black/10">
-          <div
-            className="flex items-center justify-between rounded-md px-4 py-3 text-xs font-bold uppercase tracking-[0.18em]"
-            style={{ backgroundColor: project.accentHex }}
-          >
-            <span>Case study preview</span>
+        <div
+          className="case-visual"
+          style={{ "--project-accent": project.accentHex } as CSSProperties}
+        >
+          <div className="case-visual-bar">
+            <span><i aria-hidden="true" />Selected project visual</span>
             <span>{project.timeline}</span>
           </div>
-          <div className="relative mt-5 min-h-[420px] overflow-hidden rounded-lg bg-[#101010]">
+          <div className="case-visual-media">
             <Image
               alt={`${project.title} portfolio case study visual`}
-              className="h-full w-full object-cover"
+              className="case-visual-image"
               fill
               priority
               sizes="(min-width: 1024px) 48vw, 100vw"
               src={project.image}
             />
-            <div className="case-metrics absolute bottom-5 left-5 right-5 grid gap-4 sm:grid-cols-3">
-              {project.metrics.map((metric) => (
-                <div
-                  className="rounded-md border border-white/10 bg-black/65 p-4 text-white backdrop-blur"
-                  key={metric.label}
-                >
-                  <p className="text-sm text-white/60">{metric.label}</p>
-                  <p className="mt-8 text-3xl font-bold">{metric.value}</p>
+            <span className="case-visual-index">01 / Project frame</span>
+            <div className="case-metrics">
+              {project.metrics.map((metric, index) => (
+                <div key={metric.label}>
+                  <span>0{index + 1}</span>
+                  <p>{metric.label}</p>
+                  <p>{metric.value}</p>
                 </div>
               ))}
             </div>
@@ -128,6 +128,32 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </div>
       </section>
+
+      {project.gallery ? (
+        <section className="case-gallery" aria-labelledby="gallery-title">
+          <div className="case-gallery-heading mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+            <p>Selected applications / {project.year}</p>
+            <h2 id="gallery-title">The system in motion<span className="accent">.</span></h2>
+          </div>
+          <div className="case-gallery-grid">
+            {project.gallery.map((visual) => (
+              <figure className={`case-gallery-item case-gallery-item--${visual.format}`} key={visual.src}>
+                <div className="case-gallery-frame">
+                  <div className="case-gallery-image">
+                    <Image
+                      alt={visual.alt}
+                      fill
+                      sizes={visual.format === "mobile" ? "(min-width: 900px) 28vw, 70vw" : "100vw"}
+                      src={visual.src}
+                    />
+                  </div>
+                </div>
+                <figcaption>{visual.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="case-highlights bg-black px-5 py-24 text-white sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
