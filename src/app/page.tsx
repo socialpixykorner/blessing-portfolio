@@ -173,7 +173,7 @@ export default function Home() {
           </a>
           <span className="nav-descriptor">Tongwara Blessing Katsidzira<br />Creative Director / UX &amp; Digital Product Lead</span>
           <div className="nav-links items-center gap-7 text-sm font-semibold">
-            {["Work", "Bio", "Services", "Process", "Contact"].map((item) => (
+            {["Bio", "Work", "Services", "Process", "Contact"].map((item) => (
               <a
                 className="transition hover:text-red-700"
                 href={item === "Work" ? "#archive" : `#${item.toLowerCase()}`}
