@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MobileMenu } from "./mobile-menu";
 import {
   siFigma,
   siGmail,
@@ -182,6 +183,7 @@ export default function Home() {
               </a>
             ))}
           </div>
+          <MobileMenu />
           <a
             className="nav-contact"
             href="mailto:hello@example.com"
