@@ -18,11 +18,13 @@ export type Project = {
     value: string;
   }[];
   highlights: string[];
+  galleryKicker?: string;
+  galleryTitle?: string;
   gallery?: {
     src: string;
     alt: string;
     caption: string;
-    format: "landscape" | "panorama" | "screen" | "laptop" | "desktop" | "mobile";
+    format: "landscape" | "panorama" | "screen" | "publication" | "publication-wide" | "laptop" | "desktop" | "mobile";
   }[];
 };
 
@@ -354,6 +356,64 @@ export const projects: Project[] = [
         alt: "AI-generated extreme close portrait of an elderly man with blue eyes",
         caption: "Portrait study 04 — The remembered face",
         format: "panorama",
+      },
+    ],
+  },
+  {
+    slug: "publication-systems",
+    title: "Publication Systems",
+    type: "Editorial & print design",
+    year: "1999—2026",
+    summary:
+      "Books, annual reports, identity manuals, and institutional publications designed as coherent systems of information, image, and brand.",
+    accent: "bg-[#3c356f]",
+    accentHex: "#3c356f",
+    image: "/images/case-studies/publications/aprm-yearbook.jpg",
+    scope: [
+      "Publication design",
+      "Editorial systems",
+      "Art direction",
+      "Information hierarchy",
+      "Production design",
+    ],
+    timeline: "Selected publishing archive",
+    role: "Creative Director & Publication Designer",
+    challenge:
+      "Institutional publications must carry dense information while remaining readable, credible, and recognisably part of a brand. Annual reports and identity manuals also need systems robust enough to guide many contributors and survive repeated use across print and digital formats.",
+    approach:
+      "Each publication is built from a clear editorial architecture: grid, hierarchy, typography, image direction, navigation, and production rules. The visual idea changes with the organisation, but the underlying discipline stays consistent from cover concept to detailed page templates and real-world applications.",
+    outcome:
+      "A long-running body of publication work that turns complex organisational content into accessible, distinctive, and practical communication. The selected pages pair the expressive APRM yearbook cover with LABAT Africa's detailed corporate identity manual and application system.",
+    metrics: [
+      { label: "Formats", value: "Books" },
+      { label: "Focus", value: "Systems" },
+      { label: "Archive", value: "25+ yrs" },
+    ],
+    highlights: [
+      "Editorial frameworks for annual reports, yearbooks, corporate identity manuals, and institutional books.",
+      "Detailed brand guidance spanning logos, typography, colour, imagery, signage, vehicles, and collateral.",
+      "A balance of expressive cover concepts and rigorous information systems built for sustained organisational use.",
+    ],
+    galleryKicker: "Selected publications / 1999—2026",
+    galleryTitle: "Books, brands, and systems.",
+    gallery: [
+      {
+        src: "/images/case-studies/publications/aprm-yearbook.jpg",
+        alt: "Front and back cover design for the APRM Annual Yearbook 2017",
+        caption: "APRM Yearbook — Cover system",
+        format: "screen",
+      },
+      {
+        src: "/images/case-studies/publications/iatf2018-participant-guide.png",
+        alt: "Cover and selected editorial spreads from the IATF2018 Participant Book and Exhibitor Guide",
+        caption: "IATF2018 — Participant Book and Exhibitor Guide",
+        format: "publication-wide",
+      },
+      {
+        src: "/images/case-studies/publications/labat-brand-manual-v2.png",
+        alt: "Overview of selected pages from the LABAT Africa corporate brand guidelines",
+        caption: "LABAT Africa — Corporate brand guidelines system",
+        format: "publication",
       },
     ],
   },

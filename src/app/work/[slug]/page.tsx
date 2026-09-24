@@ -132,8 +132,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       {project.gallery ? (
         <section className="case-gallery" aria-labelledby="gallery-title">
           <div className="case-gallery-heading mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-            <p>Selected applications / {project.year}</p>
-            <h2 id="gallery-title">The system in motion<span className="accent">.</span></h2>
+            <p>{project.galleryKicker ?? `Selected applications / ${project.year}`}</p>
+            <h2 id="gallery-title">{project.galleryTitle ?? "The system in motion"}<span className="accent">.</span></h2>
           </div>
           <div className="case-gallery-grid">
             {project.gallery.map((visual) => (

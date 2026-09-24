@@ -107,7 +107,7 @@ const archiveTiles = [
     title: "Strategy into systems",
     category: "Creative direction",
     year: "1999—26",
-    href: "#archive",
+    href: "/work/publication-systems",
     layout: "archive-tile--statement archive-tile--red",
   },
   {
@@ -156,7 +156,7 @@ const archiveTiles = [
     category: "Editorial & print",
     year: "1999—26",
     image: "/images/case-studies/publications/aprm-yearbook.jpg",
-    href: "#archive",
+    href: "/work/publication-systems",
     layout: "archive-tile--feature",
     position: "center center",
   },
@@ -171,8 +171,8 @@ export default function Home() {
             TBK<span className="accent">.</span>
           </a>
           <span className="nav-descriptor">Tongwara Blessing Katsidzira<br />Creative Director / UX &amp; Digital Product Lead</span>
-          <div className="nav-links hidden items-center gap-7 text-sm font-semibold md:flex">
-            {["Work", "Services", "Process", "Contact"].map((item) => (
+          <div className="nav-links items-center gap-7 text-sm font-semibold">
+            {["Work", "Bio", "Services", "Process", "Contact"].map((item) => (
               <a
                 className="transition hover:text-red-700"
                 href={item === "Work" ? "#archive" : `#${item.toLowerCase()}`}
@@ -197,7 +197,17 @@ export default function Home() {
         <div className="hero-base"><div className="hero-description"><span>01 / 05</span><p>Designing thoughtful digital products and identities with clarity, purpose, and a point of view.</p></div><div className="hero-links"><a href="#archive">Explore selected work ↘</a><a href="#contact">Start a conversation ↗</a></div></div>
       </section>
 
-      <section className="portrait-band"><div className="portrait-inner mx-auto max-w-7xl px-5 sm:px-8 lg:px-10"><div className="portrait-text"><span>The person behind the work</span><p>25+ years across print, digital media, UX, communication design, art direction, and product design.</p><span>TBK — Johannesburg, South Africa</span></div><div className="portrait-photo"><Image alt="Portrait of Tongwara Blessing Katsidzira" className="object-cover object-center grayscale" fill priority sizes="(min-width: 768px) 60vw, 100vw" src="/images/bk-back.png" /></div></div></section>
+      <section className="portrait-band" id="bio">
+        <div className="portrait-inner mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div className="portrait-text">
+            <span>The person behind the work</span>
+            <p className="portrait-statement">25+ years across print, digital media, UX, communication design, art direction, and product design.</p>
+            <p className="portrait-bio"><strong>Tongwara Blessing Katsidzira</strong> is a Creative Director, Product Developer and UX Designer with over 25 years of experience across advertising, branding, communication design and digital product development. As Creative Director at Pixykorner, he leads multidisciplinary projects spanning brand strategy, integrated campaigns, UX/UI and digital platforms. He holds an MA in User Experience Design from Falmouth University and combines a strong foundation in traditional design with human-centred design and emerging digital technologies.</p>
+            <span>TBK — Johannesburg, South Africa</span>
+          </div>
+          <div className="portrait-photo"><Image alt="Portrait of Tongwara Blessing Katsidzira" className="object-cover object-center grayscale" fill priority sizes="(min-width: 768px) 60vw, 100vw" src="/images/bk-back.png" /></div>
+        </div>
+      </section>
 
       <section className="border-y border-black/10 bg-[#f6f6ef] py-10">
         <div className="mx-auto flex max-w-7xl min-w-0 flex-col gap-6 overflow-hidden px-5 sm:px-8 lg:px-10">
