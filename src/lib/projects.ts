@@ -379,11 +379,11 @@ export const projects: Project[] = [
     timeline: "Selected publishing archive",
     role: "Creative Director & Publication Designer",
     challenge:
-      "Institutional publications must make dense, specialist information readable, credible, and useful to very different audiences. The Seychelles Food-Based Dietary Guidelines needed to translate nutrition evidence into everyday guidance for the general population, young children, and pregnant or lactating women, while remaining rooted in local foods, culture, and public-health priorities.",
+      "Every publication begins with a different communication problem: complex institutional content, multiple contributors, distinct audiences, and demanding production requirements. The shared challenge is to turn that material into a coherent reading experience that feels accessible, credible, and unmistakably connected to the organisation behind it.",
     approach:
-      "Each publication is built from a clear editorial architecture: grid, hierarchy, typography, image direction, navigation, and production rules. For the 84-page Seychelles guide, a colour-coded food system, accessible diagrams, photography, and a disciplined two-column layout organise evidence-based advice around five food groups, sustainable diets, local ingredients, and practical recommendations across three life stages.",
+      "The process starts by understanding the content, audience, purpose, and practical life of each publication. From there, a tailored editorial system brings together grid, hierarchy, typography, colour, imagery, navigation, and production rules. The visual language changes from project to project, while the underlying discipline keeps long-form information clear and consistent from cover to final page.",
     outcome:
-      "A long-running body of publication work that turns complex organisational content into accessible, distinctive, and practical communication. Produced by the Seychelles Ministry of Health with the Food and Agriculture Organization of the United Nations, the 2020 guide became a coherent public-health resource designed for use by households, health facilities, schools, educators, and community programmes.",
+      "The result is a varied body of books, annual reports, guides, and identity manuals that balance expression with utility. Each system gives its content a clear structure, strengthens the organisation's voice, and remains practical for readers, contributors, and production teams across print and digital use.",
     metrics: [
       { label: "Formats", value: "Books" },
       { label: "Focus", value: "Systems" },
