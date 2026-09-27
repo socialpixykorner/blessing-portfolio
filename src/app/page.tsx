@@ -204,7 +204,7 @@ export default function Home() {
           <div className="portrait-text">
             <span>The person behind the work</span>
             <p className="portrait-statement">25+ years across print, digital media, UX, communication design, art direction, and product design.</p>
-            <p className="portrait-bio"><strong>Tongwara Blessing Katsidzira</strong> is a Creative Director, Product Developer and UX Designer with over 25 years of experience across advertising, branding, communication design and digital product development. As Creative Director at Pixykorner, he leads multidisciplinary projects spanning brand strategy, integrated campaigns, UX/UI and digital platforms. He holds an MA in User Experience Design from Falmouth University and combines a strong foundation in traditional design with human-centred design and emerging digital technologies.</p>
+            <p className="portrait-bio"><strong>Tongwara Blessing Katsidzira</strong> is a Creative Director, Product Developer and UX Designer with over 25 years of experience across advertising, branding, communication design and digital product development. His multidisciplinary practice spans brand strategy, integrated campaigns, UX/UI and digital platforms. He holds an MA in User Experience Design from Falmouth University and combines a strong foundation in traditional design with human-centred design and emerging digital technologies.</p>
             <span>TBK — Johannesburg, South Africa</span>
           </div>
           <div className="portrait-photo"><Image alt="Portrait of Tongwara Blessing Katsidzira" className="object-cover object-center grayscale" fill priority sizes="(min-width: 768px) 60vw, 100vw" src="/images/bk-back.png" /></div>
