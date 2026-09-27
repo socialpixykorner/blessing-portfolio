@@ -156,7 +156,7 @@ const archiveTiles = [
     title: "Publication Systems",
     category: "Editorial & print",
     year: "1999—26",
-    image: "/images/case-studies/publications/aprm-yearbook.jpg",
+    image: "/images/case-studies/publications/nhc-annual-report-2015-16.png",
     href: "/work/publication-systems",
     layout: "archive-tile--feature",
     position: "center center",

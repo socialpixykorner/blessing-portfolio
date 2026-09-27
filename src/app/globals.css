@@ -312,6 +312,9 @@ section[id], footer[id] { scroll-margin-top: 76px; }
 .case-gallery-item--publication-wide { grid-column: 1 / -1; }
 .case-gallery-item--publication-wide .case-gallery-image { aspect-ratio: 2880 / 1340; }
 .case-gallery-item--publication-wide .case-gallery-image img { object-fit: contain; }
+.case-gallery-item--publication-mockup { grid-column: 1 / -1; }
+.case-gallery-item--publication-mockup .case-gallery-image { aspect-ratio: 3 / 2; }
+.case-gallery-item--publication-mockup .case-gallery-image img { object-fit: contain; }
 .case-site--publication-systems .case-gallery-grid { width: calc(100% - 80px); max-width: 1280px; margin-inline: auto; border: 1px solid #353532; background: #353532; }
 .case-site--publication-systems .case-gallery { padding-bottom: 80px; }
 .case-gallery-frame { display: contents; }

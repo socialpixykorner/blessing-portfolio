@@ -24,7 +24,7 @@ export type Project = {
     src: string;
     alt: string;
     caption: string;
-    format: "landscape" | "panorama" | "screen" | "publication" | "publication-wide" | "laptop" | "desktop" | "mobile";
+    format: "landscape" | "panorama" | "screen" | "publication" | "publication-wide" | "publication-mockup" | "laptop" | "desktop" | "mobile";
   }[];
 };
 
@@ -379,23 +379,23 @@ export const projects: Project[] = [
     timeline: "Selected publishing archive",
     role: "Creative Director & Publication Designer",
     challenge:
-      "Institutional publications must carry dense information while remaining readable, credible, and recognisably part of a brand. Annual reports and identity manuals also need systems robust enough to guide many contributors and survive repeated use across print and digital formats.",
+      "Institutional publications must make dense, specialist information readable, credible, and useful to very different audiences. The Seychelles Food-Based Dietary Guidelines needed to translate nutrition evidence into everyday guidance for the general population, young children, and pregnant or lactating women, while remaining rooted in local foods, culture, and public-health priorities.",
     approach:
-      "Each publication is built from a clear editorial architecture: grid, hierarchy, typography, image direction, navigation, and production rules. The visual idea changes with the organisation, but the underlying discipline stays consistent from cover concept to detailed page templates and real-world applications.",
+      "Each publication is built from a clear editorial architecture: grid, hierarchy, typography, image direction, navigation, and production rules. For the 84-page Seychelles guide, a colour-coded food system, accessible diagrams, photography, and a disciplined two-column layout organise evidence-based advice around five food groups, sustainable diets, local ingredients, and practical recommendations across three life stages.",
     outcome:
-      "A long-running body of publication work that turns complex organisational content into accessible, distinctive, and practical communication. The selected pages pair the expressive APRM yearbook cover with LABAT Africa's detailed corporate identity manual and application system.",
+      "A long-running body of publication work that turns complex organisational content into accessible, distinctive, and practical communication. Produced by the Seychelles Ministry of Health with the Food and Agriculture Organization of the United Nations, the 2020 guide became a coherent public-health resource designed for use by households, health facilities, schools, educators, and community programmes.",
     metrics: [
       { label: "Formats", value: "Books" },
       { label: "Focus", value: "Systems" },
       { label: "Archive", value: "25+ yrs" },
     ],
     highlights: [
-      "Editorial frameworks for annual reports, yearbooks, corporate identity manuals, and institutional books.",
-      "Detailed brand guidance spanning logos, typography, colour, imagery, signage, vehicles, and collateral.",
-      "A balance of expressive cover concepts and rigorous information systems built for sustained organisational use.",
+      "An 84-page dietary guide translating scientific evidence into practical, culturally relevant public-health communication.",
+      "A visual food system connecting five food groups with local produce, sustainable diets, meal ideas, and life-stage guidance.",
+      "Editorial frameworks spanning health guides, annual reports, yearbooks, identity manuals, and institutional books.",
     ],
     galleryKicker: "Selected publications / 1999—2026",
-    galleryTitle: "Books, brands, and systems.",
+    galleryTitle: "Books, brands, and systems",
     gallery: [
       {
         src: "/images/case-studies/publications/aprm-yearbook.jpg",
@@ -404,16 +404,28 @@ export const projects: Project[] = [
         format: "screen",
       },
       {
-        src: "/images/case-studies/publications/iatf2018-participant-guide.png",
+        src: "/images/case-studies/publications/iatf2018-participant-guide-mockup.png",
         alt: "Cover and selected editorial spreads from the IATF2018 Participant Book and Exhibitor Guide",
         caption: "IATF2018 — Participant Book and Exhibitor Guide",
-        format: "publication-wide",
+        format: "publication-mockup",
       },
       {
         src: "/images/case-studies/publications/labat-brand-manual-v2.png",
         alt: "Overview of selected pages from the LABAT Africa corporate brand guidelines",
         caption: "LABAT Africa — Corporate brand guidelines system",
         format: "publication",
+      },
+      {
+        src: "/images/case-studies/publications/fao-seychelles-dietary-guidelines-2020.jpg",
+        alt: "Mockup of the Seychelles Food-Based Dietary Guidelines 2020 showing the cover and an open interior spread",
+        caption: "FAO & Seychelles Ministry of Health — Food-Based Dietary Guidelines 2020",
+        format: "publication-mockup",
+      },
+      {
+        src: "/images/case-studies/publications/nhc-annual-report-2015-16.png",
+        alt: "Mockup of the National Heritage Council of South Africa Annual Report 2015–16 showing the cover and interior spreads",
+        caption: "National Heritage Council of South Africa — Annual Report 2015–16",
+        format: "publication-mockup",
       },
     ],
   },
