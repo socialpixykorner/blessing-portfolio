@@ -220,7 +220,7 @@ section[id], footer[id] { scroll-margin-top: 76px; }
 .swiss-site #process > div > div:first-child > p { font-size: 16px; line-height: 1.65; }
 .swiss-site #process article p { font-size: 20px; line-height: 1.4; }
 .swiss-site .tools-marquee { -webkit-mask-image: none; mask-image: none; }
-.swiss-site .tools-marquee .tools-marquee__track > div { border-radius: 0; border: 0; border-right: 1px solid var(--line); background: transparent; box-shadow: none; }
+.swiss-site .tools-marquee .tools-marquee__track > div { border: 0; background: transparent; box-shadow: none; }
 .swiss-site .project-card-marquee { -webkit-mask-image: none; mask-image: none; }
 .swiss-site section:has(> div > .tools-marquee) { background: #e5e7e3; }
 .swiss-site section:has(> div > .tools-marquee) h2 { font-size: 26px; font-weight: 600; }
@@ -304,6 +304,9 @@ section[id], footer[id] { scroll-margin-top: 76px; }
 .case-gallery-image { position: relative; width: 100%; overflow: hidden; background: #0d1519; }
 .case-gallery-item--landscape .case-gallery-image { aspect-ratio: 16 / 9; }
 .case-gallery-item--panorama .case-gallery-image { aspect-ratio: 2.057 / 1; }
+.case-gallery-item--portrait-board { grid-column: 1 / -1; }
+.case-gallery-item--portrait-board .case-gallery-image { aspect-ratio: 4 / 3; }
+.case-gallery-item--portrait-board .case-gallery-image img { object-fit: contain; }
 .case-gallery-item--screen { grid-column: 1 / -1; }
 .case-gallery-item--screen .case-gallery-image { aspect-ratio: 1.46 / 1; }
 .case-gallery-item--publication { grid-column: 1 / -1; }

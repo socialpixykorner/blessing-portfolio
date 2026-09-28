@@ -3,11 +3,9 @@ import Link from "next/link";
 import { MobileMenu } from "./mobile-menu";
 import {
   siFigma,
-  siGmail,
   siGoogleanalytics,
   siGooglemarketingplatform,
   siNextdotjs,
-  siNotion,
   siVercel,
   siWebflow,
   siWordpress,
@@ -16,19 +14,24 @@ import {
 
 const services = [
   {
-    title: "Product Design",
+    title: "Creative Leadership",
     description:
-      "Interfaces, user journeys, design systems, and prototypes shaped around real product outcomes.",
+      "Creative direction · Art direction · Integrated campaigns · Team leadership",
   },
   {
-    title: "Web Development",
+    title: "User Experience & Product",
     description:
-      "Fast Next.js builds with responsive layouts, thoughtful motion, and clean handoff-ready code.",
+      "UX strategy · Research · IA · Interaction design · Prototyping · Design systems",
   },
   {
-    title: "Brand Systems",
+    title: "Brand & Communication",
     description:
-      "Practical identity foundations, visual direction, and reusable rules for consistent launches.",
+      "Brand strategy · Identity · Advertising · Editorial · Digital campaigns",
+  },
+  {
+    title: "Digital & Artificial Intelligence",
+    description:
+      "Figma · Next.js · Vercel · Codex · AI-assisted prototyping",
   },
 ];
 
@@ -62,18 +65,16 @@ const tools: {
   mark?: string;
 }[] = [
   { name: "Figma", icon: siFigma },
-  { name: "Adobe Creative Cloud", mark: "CC" },
+  { name: "Adobe CC", mark: "CC" },
+  { name: "Next.js", icon: siNextdotjs },
+  { name: "Vercel", icon: siVercel },
   { name: "Webflow", icon: siWebflow },
   { name: "WordPress", icon: siWordpress },
   { name: "ChatGPT", mark: "GPT" },
   { name: "Codex", mark: "CX" },
+  { name: "Claude", mark: "CL" },
   { name: "GA4", icon: siGoogleanalytics },
   { name: "DV360", icon: siGooglemarketingplatform },
-  { name: "Notion", icon: siNotion },
-  { name: "Gmail", icon: siGmail },
-  { name: "Microsoft Teams", mark: "T" },
-  { name: "Vercel", icon: siVercel },
-  { name: "Next.js", icon: siNextdotjs },
 ];
 
 const archiveTiles = [
@@ -173,10 +174,10 @@ export default function Home() {
           </a>
           <span className="nav-descriptor">Tongwara Blessing Katsidzira<br />Creative Director / UX &amp; Digital Product Lead</span>
           <div className="nav-links items-center gap-7 text-sm font-semibold">
-            {["Bio", "Work", "Services", "Process", "Contact"].map((item) => (
+            {["Bio", "Work", "Expertise", "Process", "Contact"].map((item) => (
               <a
                 className="transition hover:text-red-700"
-                href={item === "Work" ? "#archive" : `#${item.toLowerCase()}`}
+                href={item === "Work" ? "#archive" : item === "Expertise" ? "#services" : `#${item.toLowerCase()}`}
                 key={item}
               >
                 {item}
@@ -186,7 +187,7 @@ export default function Home() {
           <MobileMenu />
           <a
             className="nav-contact"
-            href="mailto:hello@example.com"
+            href="mailto:hello@tongwara.com"
           >
             <span>Let&apos;s talk</span><span aria-hidden="true">↗</span>
           </a>
@@ -195,8 +196,8 @@ export default function Home() {
 
       <section className="swiss-hero mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="hero-meta"><span>Portfolio / 2026</span><span>Creative direction · Product · Digital</span><span>01 — Introduction</span></div>
-        <div className="hero-center"><div className="hero-intro-line"><p className="hero-name">Tongwara Blessing Katsidzira</p><p className="hero-status"><span />Available for select projects</p></div><h1>Creative direction<br /><span>&amp; product</span><br />development<span className="accent">.</span></h1></div>
-        <div className="hero-base"><div className="hero-description"><span>01 / 05</span><p>Designing thoughtful digital products and identities with clarity, purpose, and a point of view.</p></div><div className="hero-links"><a href="#archive">Explore selected work ↘</a><a href="#contact">Start a conversation ↗</a></div></div>
+        <div className="hero-center"><div className="hero-intro-line"><p className="hero-name">Tongwara Blessing Katsidzira</p><p className="hero-status"><span />Available for select projects</p></div><h1>CREATIVE DIRECTOR<br /><span>· UX &amp; DIGITAL</span><br />PRODUCT LEAD</h1></div>
+        <div className="hero-base"><div className="hero-description"><span>01 / 05</span><p>I turn complex organisations, brands and digital products into experiences people understand and use.</p></div><div className="hero-links"><a href="#archive">Explore selected work ↘</a><a href="#contact">Start a conversation ↗</a></div></div>
       </section>
 
       <section className="portrait-band" id="bio">
@@ -218,8 +219,8 @@ export default function Home() {
               Tools I use.
             </h2>
             <p className="max-w-[22rem] text-sm font-medium leading-6 text-black/55 sm:max-w-lg">
-              A practical stack for design systems, product interfaces,
-              analytics, collaboration, and deployment.
+              A focused toolkit for design, product development, artificial
+              intelligence, analytics, and media.
             </p>
           </div>
 
@@ -227,7 +228,7 @@ export default function Home() {
             <div className="tools-marquee__track flex w-max gap-4">
               {[...tools, ...tools].map((tool, index) => (
                 <div
-                  className="flex h-14 min-w-48 items-center gap-3 rounded-full border border-black/10 bg-white/70 px-5 text-neutral-500 grayscale transition hover:bg-white hover:text-neutral-900"
+                  className="flex h-14 min-w-48 items-center gap-3 px-5 text-neutral-500 grayscale transition hover:text-neutral-900"
                   key={`${tool.name}-${index}`}
                 >
                   <LogoMark tool={tool} />
@@ -287,9 +288,9 @@ export default function Home() {
       >
         <div className="mx-auto max-w-7xl">
           <h2 className="max-w-4xl text-5xl font-bold tracking-tight sm:text-7xl">
-            Services that move from idea to launch.
+            Why hire me.
           </h2>
-          <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 lg:grid-cols-3">
+          <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
               <article className="bg-black p-8" key={service.title}>
                 <p className="text-2xl font-bold">{service.title}</p>
@@ -385,9 +386,9 @@ export default function Home() {
           <div className="mt-12 flex flex-col justify-between gap-8 border-t border-white/10 pt-8 md:flex-row md:items-end">
             <a
               className="inline-flex h-14 w-fit items-center justify-center rounded-full bg-lime-300 px-7 text-sm font-bold text-black transition hover:bg-white"
-              href="mailto:hello@example.com"
+              href="mailto:hello@tongwara.com"
             >
-              hello@example.com
+              hello@tongwara.com
             </a>
             <p className="max-w-md text-sm font-semibold leading-6 text-white/50">
               Replace the email, project details, and case studies with

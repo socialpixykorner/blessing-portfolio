@@ -24,7 +24,7 @@ export type Project = {
     src: string;
     alt: string;
     caption: string;
-    format: "landscape" | "panorama" | "screen" | "publication" | "publication-wide" | "publication-mockup" | "laptop" | "desktop" | "mobile";
+    format: "landscape" | "panorama" | "portrait-board" | "screen" | "publication" | "publication-wide" | "publication-mockup" | "laptop" | "desktop" | "mobile";
   }[];
 };
 
@@ -259,6 +259,40 @@ export const projects: Project[] = [
       "Large-scale continental initiative for governments, financial institutions, corporates, SMEs, and trade organisations.",
       "Integrated brand, communications, digital, physical, exhibition, and registration systems.",
       "Strategic creative leadership across event planning, stakeholder engagement, and production oversight.",
+    ],
+    galleryKicker: "Selected applications / 2018",
+    galleryTitle: "A continental experience",
+    gallery: [
+      {
+        src: "/images/case-studies/iatf-2018/event-launch.jpg",
+        alt: "Press cameras surrounding delegates during the official IATF2018 event launch",
+        caption: "Event experience — Continental launch and media engagement",
+        format: "panorama",
+      },
+      {
+        src: "/images/case-studies/iatf-2018/social-campaign-grid.jpg",
+        alt: "Grid of IATF2018 Instagram posts promoting country days, speakers, sectors, and event registration",
+        caption: "Digital communications — Social campaign system",
+        format: "portrait-board",
+      },
+      {
+        src: "/images/case-studies/iatf-2018/mobile-experience.png",
+        alt: "IATF2018 mobile welcome experience displayed across a collection of smartphones",
+        caption: "Digital experience — Mobile event platform",
+        format: "landscape",
+      },
+      {
+        src: "/images/case-studies/iatf-2018/exhibition-brand-environment.png",
+        alt: "IATF2018 pink and yellow brand pattern draped across an exhibition structure",
+        caption: "Exhibition environment — Brand system in space",
+        format: "panorama",
+      },
+      {
+        src: "/images/case-studies/iatf-2018/social-mobile-mockup.png",
+        alt: "IATF2018 Nigeria Country Day social media post displayed on a mobile phone mockup",
+        caption: "Campaign application — Social content in context",
+        format: "portrait-board",
+      },
     ],
   },
   {

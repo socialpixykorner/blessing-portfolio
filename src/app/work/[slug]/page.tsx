@@ -180,7 +180,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </h2>
           <a
             className="inline-flex h-14 w-fit items-center justify-center rounded-full bg-black px-7 text-sm font-bold text-white transition hover:bg-white hover:text-black"
-            href="mailto:hello@example.com"
+            href="mailto:hello@tongwara.com"
           >
             Start a project
           </a>
