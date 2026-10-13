@@ -108,6 +108,32 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
+      {project.achievement ? (
+        <section className="case-achievement px-5 sm:px-8 lg:px-10" aria-labelledby="achievement-title">
+          <div className="case-achievement-inner mx-auto max-w-7xl">
+            <div className="case-achievement-result">
+              <p className="case-achievement-statistic">
+                <span>{project.achievement.statistic}</span>{" "}
+                <span>{project.achievement.unit}</span>
+              </p>
+              <p className="case-achievement-descriptor">{project.achievement.descriptor}</p>
+              <p className="case-achievement-performance">{project.achievement.performance}</p>
+            </div>
+            <div className="case-achievement-story">
+              <h2 id="achievement-title">{project.achievement.heading}</h2>
+              {project.achievement.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+              <ul className="case-achievement-sources" aria-label="Event result sources">
+                {project.achievement.sources.map((source) => (
+                  <li key={source.href}><a href={source.href}>{source.label}</a></li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section className="case-facts border-y border-black/10 bg-white px-5 py-20 sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3">
           <InfoCard label="Role" value={project.role} />

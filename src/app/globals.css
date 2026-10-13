@@ -280,6 +280,21 @@ section[id], footer[id] { scroll-margin-top: 76px; }
 .case-metrics p:first-of-type { padding-right: 24px; color: rgb(255 255 255 / 58%); font-size: 12px; line-height: 1.25; }
 .case-metrics p:last-child { margin-top: 25px; font-size: clamp(19px,1.8vw,26px); font-weight: 600; line-height: 1; letter-spacing: -.025em; }
 .case-facts { background: #e5e7e3; border-color: var(--line); }
+.case-achievement { padding-bottom: 80px; }
+.case-achievement-inner { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr); gap: 64px; border-top: 1px solid var(--foreground); padding-top: 40px; }
+.case-achievement-inner > div { min-width: 0; }
+.case-achievement-statistic { font-size: 96px; font-weight: 600; line-height: 1; letter-spacing: 0; font-variant-numeric: lining-nums; }
+.case-achievement-statistic span { display: block; }
+.case-achievement-descriptor { max-width: 42ch; margin-top: 28px; font-size: 20px; line-height: 1.5; }
+.case-achievement-performance { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 20px; font-family: "IBM Plex Mono",monospace; font-size: 16px; line-height: 1.5; }
+.case-achievement-story h2 { margin-bottom: 28px; font-size: 36px; font-weight: 600; line-height: 1.15; letter-spacing: 0; text-wrap: balance; }
+.case-achievement-story > p { max-width: 65ch; margin-top: 18px; font-size: 18px; line-height: 1.6; }
+.case-achievement-sources { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 28px; list-style: none; }
+.case-achievement-sources a { color: inherit; font-size: 14px; line-height: 1.5; text-decoration: underline; text-underline-offset: 4px; }
+.case-achievement-sources a:hover { text-decoration-thickness: 2px; }
+.case-achievement-sources a:focus-visible { outline: 2px solid var(--foreground); outline-offset: 5px; }
+@media (max-width: 900px) { .case-achievement-inner { grid-template-columns: 1fr; gap: 40px; }.case-achievement-statistic { font-size: 72px; }.case-achievement-statistic span { display: inline; } }
+@media (max-width: 700px) { .case-achievement { padding-bottom: 56px; }.case-achievement-inner { padding-top: 28px; gap: 32px; }.case-achievement-statistic { font-size: 48px; }.case-achievement-statistic span { display: block; }.case-achievement-story h2 { font-size: 28px; margin-bottom: 22px; }.case-achievement-descriptor { font-size: 18px; } }
 .case-facts > div { gap: 0; border-top: 1px solid var(--foreground); }
 .case-facts article { border: 0; border-right: 1px solid var(--line); border-radius: 0; background: transparent; padding: 24px; }
 .case-facts article:first-child { padding-left: 0; }

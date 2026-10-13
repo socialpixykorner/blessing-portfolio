@@ -18,6 +18,15 @@ export type Project = {
     value: string;
   }[];
   highlights: string[];
+  achievement?: {
+    statistic: string;
+    unit: string;
+    descriptor: string;
+    performance: string;
+    heading: string;
+    paragraphs: string[];
+    sources: { label: string; href: string }[];
+  };
   galleryKicker?: string;
   galleryTitle?: string;
   gallery?: {
@@ -398,6 +407,26 @@ export const projects: Project[] = [
     ],
     timeline: "IATF integrated strategy",
     role: "Strategic Lead, Creative Director & Delivery Partner",
+    achievement: {
+      statistic: "US$32.6",
+      unit: "Billion",
+      descriptor:
+        "Cross-border trade deals recorded at the inaugural Intra-African Trade Fair (IATF2018).",
+      performance: "30.4% above the US$25 billion target.",
+      heading: "From Creative Strategy to Continental Trade Impact",
+      paragraphs: [
+        "As Founder and Creative Director of Pixykorner Studio, I led the creative team contributing to the inaugural Intra-African Trade Fair (IATF2018), held in Cairo, Egypt.",
+        "The event recorded US$32.6 billion in cross-border trade deals, exceeding its US$25 billion target by 30.4%.",
+        "My role focused on creative direction, strategic visual communication and coordinating the Pixykorner team's creative contributions to the event.",
+      ],
+      sources: [
+        { label: "IATF: event results", href: "https://www.iatf.africa/" },
+        {
+          label: "Afreximbank: US$25 billion target",
+          href: "https://www.afreximbank.com/first-intra-african-trade-fair-opens-with-call-for-initiatives-that-drive-afcfta/",
+        },
+      ],
+    },
     challenge:
       "The inaugural Intra-African Trade Fair needed to bring governments, sponsors, exhibitors, media, ambassadors, delegates, and trade audiences into one coherent event ecosystem. The strategic challenge was not only to communicate the fair, but to build the systems that could move a continental idea into participation, visibility, registration, and operational delivery.",
     approach:
