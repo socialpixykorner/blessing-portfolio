@@ -155,6 +155,21 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
+      {project.process ? (
+        <section className="case-story px-5 py-24 sm:px-8 lg:px-10" aria-labelledby="process-title">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+            <h2 id="process-title" className="text-5xl font-bold tracking-tight sm:text-7xl">
+              From insight to execution.
+            </h2>
+            <div className="grid gap-4">
+              {project.process.map((step) => (
+                <StoryBlock key={step.title} title={step.title} body={step.body} />
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       {project.gallery ? (
         <section className="case-gallery" aria-labelledby="gallery-title">
           <div className="case-gallery-heading mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">

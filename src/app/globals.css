@@ -353,6 +353,9 @@ section[id], footer[id] { scroll-margin-top: 76px; }
 .case-gallery-image video { width: 100%; height: 100%; display: block; object-fit: contain; background: #050505; }
 .case-gallery-item--desktop .case-gallery-image img,.case-gallery-item--mobile .case-gallery-image img { object-fit: contain; }
 .case-site--eventintel .case-visual-image,.case-site--eventintel .case-gallery-item--screen .case-gallery-image img { object-fit: contain; }
+.case-site--pixylivex .case-visual-image,.case-site--pixylivex .case-gallery-item--screen .case-gallery-image img { object-fit: contain; }
+.case-site--pixylivex .case-visual-media,.case-site--pixylivex .case-gallery-image { background: #050505; }
+.case-site--pixylivex .case-gallery-item--screen .case-gallery-image { aspect-ratio: 3248 / 1980; }
 .case-site--eventintel .case-visual-media,.case-site--eventintel .case-gallery-item--screen .case-gallery-image { background: #050505; }
 .case-site--stories-that-move-markets .case-gallery-item--screen .case-gallery-image { aspect-ratio: 16 / 9; background: #050505; }
 .case-site--stories-that-move-markets .case-visual-image { object-position: center 56%; }

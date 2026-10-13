@@ -18,6 +18,7 @@ export type Project = {
     value: string;
   }[];
   highlights: string[];
+  process?: { title: string; body: string }[];
   achievement?: {
     statistic: string;
     unit: string;
@@ -282,39 +283,92 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "inafrica-network",
-    title: "InAfrica Network",
-    type: "Mobile media platform",
-    year: "2025",
+    slug: "pixylivex",
+    title: "PixyliveX",
+    type: "Product leadership & procurement platform",
+    year: "2026",
     summary:
-      "A mobile-first African news and social video experience where the continent's stories move markets.",
-    accent: "bg-[#d36a38]",
-    accentHex: "#d36a38",
-    image: "/images/case-studies/inafrica-network-full.jpg",
+      "An exhibition stand procurement platform shaped through design thinking, translating insights into a coherent marketplace experience and design system.",
+    accent: "bg-[#d64532]",
+    accentHex: "#d64532",
+    image: "/images/case-studies/pixylivex/workspace-cover.png",
     scope: [
-      "Platform UX",
-      "Community workflows",
-      "Mobile UI",
+      "Product development leadership",
+      "Design thinking",
+      "Information architecture",
+      "Marketplace UX",
       "Design system",
-      "Engagement strategy",
+      "Visual communication",
     ],
-    timeline: "Product concept",
-    role: "Lead Product Designer & UX Strategist",
+    timeline: "Insight gathering to product development",
+    role: "Product Development Lead & Design System Lead",
     challenge:
-      "The platform needed to combine trusted news, social video, community participation, and market relevance without overwhelming users on mobile.",
+      "Exhibition stand procurement brings together design selection, supplier comparison, pricing and delivery deadlines. When these decisions sit across separate conversations and materials, buyers can struggle to understand their options and assess delivery confidence. The product challenge was to bring discovery, comparison and procurement into a clear experience for exhibition project teams.",
     approach:
-      "The experience uses a simple mobile information architecture: onboarding, personalised news, topic filters, short-form video, comments, creator actions, and share-first engagement loops.",
+      "I led product development using a design-thinking approach to gather insights before mapping the artefact. Those insights informed the product structure, user journeys and priorities for the interface. I translated that direction into a design system and coordinated its application across the public website, marketplace and workspace entry, connecting product strategy with consistent creative execution.",
     outcome:
-      "A focused product direction for an African media network that can support editorial content, social interaction, and audience growth from a single mobile-first system.",
+      "The resulting product brings exhibition stand discovery, category and size filtering, supplier information, quote requests and delivery-guarantee communication into one recognisable experience. The design system provides a shared visual language across browsing, procurement information and account access, demonstrating how insight-led product direction can become a coordinated digital experience.",
     metrics: [
-      { label: "Platform", value: "Mobile" },
-      { label: "Focus", value: "Media" },
-      { label: "Flows", value: "5" },
+      { label: "Platform", value: "Web" },
+      { label: "Focus", value: "Stands" },
+      { label: "Role", value: "Product lead" },
+    ],
+    process: [
+      {
+        title: "Gather insights",
+        body: "I began with design thinking to understand the procurement problem before committing to an interface. Insight gathering established the context for decisions around stand selection, comparison and delivery confidence.",
+      },
+      {
+        title: "Map the artefact",
+        body: "I used the insights to map the product's information architecture and user journeys: discovering stand options, narrowing a selection, understanding procurement information and entering the workspace. This gave the interface a structure grounded in the problem it needed to address.",
+      },
+      {
+        title: "Develop the design system",
+        body: "The design system followed the insight and mapping work. Typography, colour, spacing, navigation, buttons, form fields and listing patterns established a consistent language across the marketplace and supporting pages, connecting the brand with practical product decisions.",
+      },
+      {
+        title: "Coordinate product execution",
+        body: "I led the translation of the mapped artefact and design system into the product experience. The execution connected marketplace filters and stand listings with procurement messaging, delivery-guarantee information and account access, keeping the different touchpoints visually and functionally coherent.",
+      },
     ],
     highlights: [
-      "Mobile news, creator, and short-form video journeys for African audiences.",
-      "Community and engagement workflows shaped around comments, follows, and sharing.",
-      "A brandable interface system for future content and market expansion.",
+      "Led product development from insight gathering and artefact mapping to coordinated interface execution.",
+      "Developed the design system after design thinking, giving product decisions a shared foundation across pages and workflows.",
+      "Connected exhibition stand discovery with supplier, pricing and delivery information in a coherent procurement experience.",
+    ],
+    galleryKicker: "Selected product screens / 2026",
+    galleryTitle: "From insights to product experience",
+    gallery: [
+      {
+        src: "/images/case-studies/pixylivex/marketplace-updated.png",
+        alt: "PixyliveX marketplace with exhibition stand categories, size filtering, sorting and stand listings",
+        caption: "Marketplace / Discovery, filtering and stand selection",
+        format: "screen",
+      },
+      {
+        src: "/images/case-studies/pixylivex/product-overview.png",
+        alt: "PixyliveX public website showing exhibition design imagery and procurement navigation",
+        caption: "Product introduction / Connecting stand design with procurement",
+        format: "screen",
+      },
+      {
+        src: "/images/case-studies/pixylivex/delivery-guarantee.png",
+        alt: "PixyliveX delivery-guarantee information with supplier accreditation and buyer protection messaging",
+        caption: "Procurement confidence / Delivery-guarantee information",
+        format: "screen",
+      },
+      {
+        src: "/images/case-studies/pixylivex/workspace-sign-in.png",
+        alt: "PixyliveX workspace sign-in page with labelled email and password fields",
+        caption: "Workspace entry / Applying the design system to account access",
+        format: "screen",
+      },
+      {
+        src: "/images/case-studies/pixylivex/brand-communication.png",
+        alt: "PixyliveX public-facing customer-feedback layout and newsletter subscription section",
+        caption: "Brand communication / Customer-feedback presentation and subscription layout",
+        format: "screen",
+      },
     ],
   },
   {
