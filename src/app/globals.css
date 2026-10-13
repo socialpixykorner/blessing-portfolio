@@ -318,6 +318,11 @@ section[id], footer[id] { scroll-margin-top: 76px; }
 .case-gallery-item--publication-mockup { grid-column: 1 / -1; }
 .case-gallery-item--publication-mockup .case-gallery-image { aspect-ratio: 3 / 2; }
 .case-gallery-item--publication-mockup .case-gallery-image img { object-fit: contain; }
+.case-gallery-item--report-page { grid-column: span 1; }
+.case-gallery-item--report-page .case-gallery-image { aspect-ratio: 595 / 842; background: #f4f4f0; }
+.case-gallery-item--report-page .case-gallery-image img { object-fit: contain; }
+.case-site--strategy-into-systems .case-gallery-grid { width: calc(100% - 80px); max-width: 1280px; margin-inline: auto; grid-template-columns: repeat(2,minmax(0,1fr)); border: 1px solid #353532; }
+.case-site--strategy-into-systems .case-gallery { padding-bottom: 80px; }
 .case-site--publication-systems .case-gallery-grid { width: calc(100% - 80px); max-width: 1280px; margin-inline: auto; border: 1px solid #353532; background: #353532; }
 .case-site--publication-systems .case-gallery { padding-bottom: 80px; }
 .case-gallery-frame { display: contents; }
@@ -330,7 +335,12 @@ section[id], footer[id] { scroll-margin-top: 76px; }
 .case-gallery-item--desktop .case-gallery-image { min-height: 820px; }
 .case-gallery-item--mobile .case-gallery-image { min-height: 820px; }
 .case-gallery-image img { object-fit: cover; object-position: top center; }
+.case-gallery-image video { width: 100%; height: 100%; display: block; object-fit: contain; background: #050505; }
 .case-gallery-item--desktop .case-gallery-image img,.case-gallery-item--mobile .case-gallery-image img { object-fit: contain; }
+.case-site--eventintel .case-visual-image,.case-site--eventintel .case-gallery-item--screen .case-gallery-image img { object-fit: contain; }
+.case-site--eventintel .case-visual-media,.case-site--eventintel .case-gallery-item--screen .case-gallery-image { background: #050505; }
+.case-site--stories-that-move-markets .case-gallery-item--screen .case-gallery-image { aspect-ratio: 16 / 9; background: #050505; }
+.case-site--stories-that-move-markets .case-visual-image { object-position: center 56%; }
 .case-gallery-item figcaption { order: -1; display: flex; align-items: center; min-height: 54px; padding: 12px 18px; border-bottom: 1px solid #474743; color: #c2c2bd; font-family: "IBM Plex Mono",monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .035em; }
 .case-highlights { background: #333d36; }
 .case-highlights > div > div { border-radius: 0; border: 0; border-top: 1px solid #8a948b; background: transparent; }
@@ -343,4 +353,4 @@ section[id], footer[id] { scroll-margin-top: 76px; }
 .case-cta a { border-radius: 0; background: #171717; }
 .case-cta a:hover { background: white; color: #171717; }
 @media (max-width: 700px) { .case-header nav { min-height: 62px; gap: 16px; }.case-header nav > * { min-width: 0; }.case-hero > div:first-child { min-height: 360px; }.case-hero h1 { font-size: clamp(50px,12vw,80px); }.case-visual-bar { min-height: 52px; gap: 10px; padding: 11px 12px; font-size: 8px; }.case-visual-bar span:last-child { max-width: 48%; }.case-visual-media { min-height: 410px; }.case-visual-index { top: 12px; left: 12px; }.case-visual .case-metrics { right: 8px; bottom: 8px; left: 8px; gap: 3px; }.case-metrics > div { min-height: 88px; padding: 11px 9px 10px; }.case-metrics > div > span { top: 9px; right: 8px; font-size: 7px; }.case-metrics p:first-of-type { font-size: 9px; }.case-metrics p:last-child { margin-top: 23px; font-size: clamp(14px,4vw,18px); overflow-wrap: anywhere; }.case-facts > div { display: block; }.case-facts article { border-right: 0; border-bottom: 1px solid var(--line); padding-left: 0; }.case-gallery { padding-top: 68px; }.case-gallery-heading { grid-template-columns: 1fr; padding-bottom: 28px; }.case-gallery-heading h2 { font-size: clamp(46px,14vw,68px); }.case-gallery-grid { grid-template-columns: 1fr; }.case-gallery-item--landscape { grid-column: auto; }.case-gallery-item--laptop { padding-bottom: 52px; }.case-gallery-item--laptop .case-gallery-frame { width: min(92vw, 100%); margin: 34px auto 28px; padding: 7px 7px 10px; border-radius: 11px 11px 4px 4px; }.case-gallery-item--laptop .case-gallery-frame::before { top: 2px; width: 3px; height: 3px; }.case-gallery-item--laptop .case-gallery-frame::after { height: 20px; }.case-gallery-item--laptop .case-gallery-image { border-radius: 5px 5px 1px 1px; }.case-gallery-item--desktop .case-gallery-image { min-height: 620px; }.case-gallery-item--mobile .case-gallery-image { min-height: 720px; }.case-gallery-item figcaption { min-height: 48px; padding-inline: 14px; }.case-highlights article { border-right: 0; border-bottom: 1px solid #8a948b; } }
-@media (max-width: 700px) { .case-site--publication-systems .case-gallery-grid { width: calc(100% - 32px); }.case-site--publication-systems .case-gallery { padding-bottom: 48px; } }
+@media (max-width: 700px) { .case-site--publication-systems .case-gallery-grid,.case-site--strategy-into-systems .case-gallery-grid { width: calc(100% - 32px); grid-template-columns: 1fr; }.case-site--publication-systems .case-gallery,.case-site--strategy-into-systems .case-gallery { padding-bottom: 48px; } }

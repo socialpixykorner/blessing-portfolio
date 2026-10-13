@@ -140,12 +140,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <figure className={`case-gallery-item case-gallery-item--${visual.format}`} key={visual.src}>
                 <div className="case-gallery-frame">
                   <div className="case-gallery-image">
-                    <Image
-                      alt={visual.alt}
-                      fill
-                      sizes={visual.format === "mobile" ? "(min-width: 900px) 28vw, 70vw" : "100vw"}
-                      src={visual.src}
-                    />
+                    {visual.media === "video" ? (
+                      <video
+                        aria-label={visual.alt}
+                        controls
+                        playsInline
+                        preload="metadata"
+                        src={visual.src}
+                      />
+                    ) : (
+                      <Image
+                        alt={visual.alt}
+                        fill
+                        sizes={visual.format === "mobile" ? "(min-width: 900px) 28vw, 70vw" : "100vw"}
+                        src={visual.src}
+                      />
+                    )}
                   </div>
                 </div>
                 <figcaption>{visual.caption}</figcaption>

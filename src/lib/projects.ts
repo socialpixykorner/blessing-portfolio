@@ -24,7 +24,8 @@ export type Project = {
     src: string;
     alt: string;
     caption: string;
-    format: "landscape" | "panorama" | "portrait-board" | "screen" | "publication" | "publication-wide" | "publication-mockup" | "laptop" | "desktop" | "mobile";
+    media?: "image" | "video";
+    format: "landscape" | "panorama" | "portrait-board" | "screen" | "publication" | "publication-wide" | "publication-mockup" | "report-page" | "laptop" | "desktop" | "mobile";
   }[];
 };
 
@@ -190,6 +191,88 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "eventintel",
+    title: "Eventintel",
+    type: "Product thinking & SaaS UX",
+    year: "2026",
+    summary:
+      "A product strategy and interface concept for turning live event activity into attendance forecasts, lead intelligence, and executive decisions.",
+    accent: "bg-[#0b45ff]",
+    accentHex: "#0b45ff",
+    image: "/images/case-studies/eventintel/dashboard-command-center.png",
+    scope: [
+      "Product strategy",
+      "UX architecture",
+      "Dashboard design",
+      "AI feature framing",
+      "Conversion journey",
+    ],
+    timeline: "Product thinking case study",
+    role: "Product Designer, UX Strategist & Interface Designer",
+    challenge:
+      "Large events create thousands of signals across registration, check-in, sessions, surveys, and lead capture, but organisers often see those signals too late. The product problem was to frame an event platform that moves beyond administration and helps teams understand what is happening, what is likely to happen next, and where to act.",
+    approach:
+      "The thinking started with the decision moments: who needs the signal, when the signal becomes useful, and what action should follow. The experience was shaped around three layers: an executive command center for live event health, an intelligence layer that translates activity into recommendations, and a market-facing journey that explains the platform without burying the product in feature noise.",
+    outcome:
+      "Eventintel became a clear product narrative for an enterprise event intelligence platform. The concept connects operational workflows, AI summaries, audience forecasting, lead scoring, and buyer education into one coherent system, showing how event data can become practical product value instead of a passive reporting layer.",
+    metrics: [
+      { label: "Focus", value: "Product" },
+      { label: "Signals", value: "Live data" },
+      { label: "Mode", value: "B2B SaaS" },
+    ],
+    highlights: [
+      "Reframed event software from task management into decision support for organisers, sponsors, and sales teams.",
+      "Defined an intelligence layer around forecasting, routing, sentiment, matchmaking, and executive summaries.",
+      "Connected dashboard utility with a public-facing product story, pricing path, resources, and conversion moments.",
+    ],
+    galleryKicker: "Product thinking / 2026",
+    galleryTitle: "From event activity to decisions",
+    gallery: [
+      {
+        src: "/images/case-studies/eventintel/dashboard-command-center.png",
+        alt: "Eventintel dashboard command center with registrations, check-ins, leads captured, sessions live, engagement chart, and AI insights",
+        caption: "Dashboard thinking — Live health, engagement, and next-best actions",
+        format: "screen",
+      },
+      {
+        src: "/images/case-studies/eventintel/intelligence-layer.png",
+        alt: "Eventintel intelligence layer section explaining attendance forecasting, lead scoring, sentiment feedback, and smart matchmaking",
+        caption: "AI layer — Turning raw activity into forecasts and recommendations",
+        format: "screen",
+      },
+      {
+        src: "/images/case-studies/eventintel/solutions-grid.png",
+        alt: "Eventintel solutions grid for government, international organisations, conferences, and banking and finance",
+        caption: "Segmentation — Matching the product story to demanding organisations",
+        format: "screen",
+      },
+      {
+        src: "/images/case-studies/eventintel/resources-architecture.png",
+        alt: "Eventintel resources page showing blog, guides, templates, case studies, documentation, and webinars",
+        caption: "Information architecture — Resources that support buyer education",
+        format: "screen",
+      },
+      {
+        src: "/images/case-studies/eventintel/about-narrative.png",
+        alt: "Eventintel about page with the headline Where events become intelligence",
+        caption: "Narrative system — A mission that keeps the product promise simple",
+        format: "screen",
+      },
+      {
+        src: "/images/case-studies/eventintel/about-system.png",
+        alt: "Eventintel about page showing the mission and vision beneath the product narrative",
+        caption: "Product belief — Mission and vision translated into a platform promise",
+        format: "screen",
+      },
+      {
+        src: "/images/case-studies/eventintel/conversion-cta-footer.png",
+        alt: "Eventintel blue call-to-action section asking if the user is ready to make the next event measurable",
+        caption: "Conversion path — Clear next steps for demo and trial intent",
+        format: "screen",
+      },
+    ],
+  },
+  {
     slug: "inafrica-network",
     title: "InAfrica Network",
     type: "Mobile media platform",
@@ -292,6 +375,156 @@ export const projects: Project[] = [
         alt: "IATF2018 Nigeria Country Day social media post displayed on a mobile phone mockup",
         caption: "Campaign application — Social content in context",
         format: "portrait-board",
+      },
+    ],
+  },
+  {
+    slug: "strategy-into-systems",
+    title: "Strategy into systems",
+    type: "Integrated strategy & delivery system",
+    year: "2018",
+    summary:
+      "An integrated IATF strategy case study showing how brand, stakeholder engagement, marketing, media, registration, ambassadors, and reporting became one delivery system.",
+    accent: "bg-[#e3294f]",
+    accentHex: "#e3294f",
+    image: "/images/case-studies/strategy-into-systems/final-report-cover.jpg",
+    scope: [
+      "Integrated strategy",
+      "Brand communication",
+      "Stakeholder engagement",
+      "Marketing systems",
+      "Media and PR",
+      "Reporting framework",
+    ],
+    timeline: "IATF integrated strategy",
+    role: "Strategic Lead, Creative Director & Delivery Partner",
+    challenge:
+      "The inaugural Intra-African Trade Fair needed to bring governments, sponsors, exhibitors, media, ambassadors, delegates, and trade audiences into one coherent event ecosystem. The strategic challenge was not only to communicate the fair, but to build the systems that could move a continental idea into participation, visibility, registration, and operational delivery.",
+    approach:
+      "The work connected brand strategy to practical implementation. The report frames the event concept, country participation, sponsorship onboarding, registration, marketing, media and PR, social channels, ambassador coordination, and post-event recommendations as linked parts of one operating system. Each touchpoint had a role: create awareness, build credibility, convert participation, coordinate stakeholders, and preserve learning for future editions.",
+    outcome:
+      "The strategy helped structure a first-of-its-kind continental trade platform around a repeatable delivery model. IATF 2018 surpassed the reduced country-participation threshold, brought together 44 countries overall, supported more than 1,000 exhibitors, and produced a documented framework that could inform future IATF editions.",
+    metrics: [
+      { label: "Countries", value: "44" },
+      { label: "Exhibitors", value: "1,086" },
+      { label: "System", value: "360°" },
+    ],
+    highlights: [
+      "Turned the event concept into a joined-up delivery system across brand, sponsorship, country participation, registration, marketing, media, PR, and ambassadors.",
+      "Used the brand strategy as the reference point for campaign messaging, stakeholder engagement, collateral, venue branding, airport branding, and promotional videos.",
+      "Documented challenges, mitigations, and recommendations so the inaugural event could become a repeatable framework for future editions.",
+    ],
+    galleryKicker: "IATF integrated strategy / 2018",
+    galleryTitle: "From continental ambition to operating system",
+    gallery: [
+      {
+        src: "/images/case-studies/strategy-into-systems/final-report-cover.jpg",
+        alt: "IATF 2018 final report cover with event branding and handshake image",
+        caption: "Final report — Strategy, delivery, and post-event learning",
+        format: "report-page",
+      },
+      {
+        src: "/images/case-studies/strategy-into-systems/executive-summary.jpg",
+        alt: "IATF 2018 final report executive summary page",
+        caption: "Strategic frame — Transforming Africa through trade, information, and market access",
+        format: "report-page",
+      },
+      {
+        src: "/images/case-studies/strategy-into-systems/event-concept.jpg",
+        alt: "IATF 2018 final report event concept page",
+        caption: "Event concept — Conference, exhibition, country pavilions, and B2B engagement",
+        format: "report-page",
+      },
+      {
+        src: "/images/case-studies/strategy-into-systems/marketing-strategy.jpg",
+        alt: "IATF 2018 final report marketing the IATF page",
+        caption: "Marketing system — Brand strategy as the campaign reference point",
+        format: "report-page",
+      },
+      {
+        src: "/images/case-studies/strategy-into-systems/media-pr-phases.jpg",
+        alt: "IATF 2018 final report media and PR phases page",
+        caption: "Media and PR — Pre-event, during-event, and post-event communication phases",
+        format: "report-page",
+      },
+      {
+        src: "/images/case-studies/strategy-into-systems/social-media-process.jpg",
+        alt: "IATF 2018 final report social media process page",
+        caption: "Social process — Awareness, positioning, engagement, and conversation",
+        format: "report-page",
+      },
+      {
+        src: "/images/case-studies/strategy-into-systems/ambassadors-programme.jpg",
+        alt: "IATF 2018 final report brand ambassadors programme page",
+        caption: "Ambassador programme — Coordination, induction, content, reporting, and stakeholder support",
+        format: "report-page",
+      },
+      {
+        src: "/images/case-studies/strategy-into-systems/recommendations.jpg",
+        alt: "IATF 2018 final report event summary and recommendations page",
+        caption: "System learning — Recommendations for governance, task teams, timing, and future delivery",
+        format: "report-page",
+      },
+    ],
+  },
+  {
+    slug: "stories-that-move-markets",
+    title: "Stories that move markets",
+    type: "Motion storytelling & campaign content",
+    year: "2018—2020",
+    summary:
+      "A motion-led storytelling archive turning continental trade, cultural memory, and public-impact reporting into clear audience-ready films.",
+    accent: "bg-[#d64532]",
+    accentHex: "#d64532",
+    image: "/images/case-studies/stories-that-move-markets/saftas-in-memoriam-thumbnail.png",
+    scope: [
+      "Motion storytelling",
+      "Narrative editing",
+      "Institutional communication",
+      "Event content",
+      "Public-impact reporting",
+    ],
+    timeline: "Selected video archive",
+    role: "Creative Director, Story Lead & Motion Producer",
+    challenge:
+      "Institutional stories often carry important meaning but arrive as speeches, reports, event footage, or fragmented campaign material. The challenge was to turn that material into films that could hold attention, carry emotion, and make complex initiatives feel immediate to public, cultural, and stakeholder audiences.",
+    approach:
+      "The work treats editing as strategic communication. Each film begins by identifying the human signal inside the brief: gratitude and momentum for a continental trade platform, dignity and remembrance for a cultural broadcast, and clarity for a public-impact report. Rhythm, sequencing, titles, image selection, and sound are used to move the audience from information to understanding.",
+    outcome:
+      "The films show how moving-image storytelling can give institutions a stronger public voice. Across trade, culture, and development communication, the work transforms source material into narratives designed for recall, trust, emotion, and momentum.",
+    metrics: [
+      { label: "Medium", value: "Video" },
+      { label: "Stories", value: "3" },
+      { label: "Use", value: "Public" },
+    ],
+    highlights: [
+      "Translated a continental trade event into a thank-you film that extends stakeholder momentum beyond the venue.",
+      "Shaped a memorial sequence with restraint, pacing, and emotional dignity for a broadcast audience.",
+      "Turned development reporting into accessible motion communication during a high-stakes public-health moment.",
+    ],
+    galleryKicker: "Motion archive / 2018—2020",
+    galleryTitle: "Institutional stories with public energy",
+    gallery: [
+      {
+        src: "/videos/case-studies/stories-that-move-markets/iatf-2018-thank-you.mp4",
+        alt: "IATF 2018 thank-you motion story video",
+        caption: "IATF 2018 — Thank-you film for a continental trade platform",
+        media: "video",
+        format: "screen",
+      },
+      {
+        src: "/videos/case-studies/stories-that-move-markets/saftas14-in-memoriam.mp4",
+        alt: "SAFTAs 14 In Memoriam broadcast motion sequence",
+        caption: "SAFTAs 14 — In Memoriam sequence shaped for dignity and remembrance",
+        media: "video",
+        format: "screen",
+      },
+      {
+        src: "/videos/case-studies/stories-that-move-markets/undp-covid-19-report.mp4",
+        alt: "UNDP COVID-19 report motion communication video",
+        caption: "UNDP COVID-19 report — Public-impact information translated into motion",
+        media: "video",
+        format: "screen",
       },
     ],
   },
