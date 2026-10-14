@@ -31,15 +31,17 @@ test("analytics blocks events before consent, initialises once and stops on with
     assert.equal(defaults.ad_storage, "denied");
     trackEvent("contact_click", { page_path: "/", cta_label: "Contact" });
     assert.equal(mockWindow.dataLayer.filter(([command]) => command === "event").length, 1);
-    stopAnalytics();
+    stopAnalytics(false);
     const afterWithdrawal = mockWindow.dataLayer.length;
     trackEvent("page_view", { page_path: "/work/pixylivex" });
     assert.equal(mockWindow.dataLayer.length, afterWithdrawal);
     assert.equal((mockWindow as unknown as Record<string, unknown>)["ga-disable-G-KRR4D4SSNW"], true);
-    assert.equal(reloads, 1);
+    assert.equal(reloads, 0);
     assert.ok(cookies.some((value) => value.startsWith("_ga=") && value.includes("Max-Age=0")));
     assert.ok(cookies.some((value) => value.includes("domain=.tongwara.com")));
     assert.ok(cookies.every((value) => !value.startsWith("essential=")));
+    stopAnalytics();
+    assert.equal(reloads, 1);
   } finally {
     Object.assign(globalThis, { window: oldWindow, document: oldDocument });
   }

@@ -5,19 +5,7 @@ import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { initializeAnalytics, measurementId, stopAnalytics, trackEvent, type AnalyticsEvent } from "@/lib/analytics";
-
-const consentKey = "tongwara-analytics-consent-v1";
-type Consent = "granted" | "denied" | null;
-let sessionConsent: Consent = null;
-
-function readConsent(): Consent {
-  try {
-    const saved = JSON.parse(localStorage.getItem(consentKey) ?? "null");
-    return saved?.expires > Date.now() && ["granted", "denied"].includes(saved.value) ? saved.value : null;
-  } catch {
-    return sessionConsent;
-  }
-}
+import { consentIsPersisted, readConsent, saveConsent, type Consent } from "@/lib/consent";
 
 function subscribe(listener: () => void) {
   window.addEventListener("storage", listener);
@@ -26,15 +14,6 @@ function subscribe(listener: () => void) {
     window.removeEventListener("storage", listener);
     window.removeEventListener("tongwara-consent-change", listener);
   };
-}
-
-function saveConsent(value: Exclude<Consent, null>) {
-  sessionConsent = value;
-  try {
-    localStorage.setItem(consentKey, JSON.stringify({ value, expires: Date.now() + 180 * 86400000 }));
-  } catch { /* A storage-blocking browser can still honour the choice for this session. */ }
-  if (value === "denied") stopAnalytics();
-  window.dispatchEvent(new Event("tongwara-consent-change"));
 }
 
 type Props = { caseStudies: { slug: string; title: string }[] };
@@ -52,7 +31,7 @@ export default function Analytics({ caseStudies }: Props) {
 
   useEffect(() => {
     if (!granted) {
-      if (initialized.current) stopAnalytics();
+      if (initialized.current) stopAnalytics(consentIsPersisted());
       lastPage.current = null;
       return;
     }
@@ -95,7 +74,9 @@ export default function Analytics({ caseStudies }: Props) {
   }, [granted, path, title]);
 
   function choose(value: Exclude<Consent, null>) {
-    saveConsent(value);
+    const persisted = saveConsent(value);
+    if (value === "denied") stopAnalytics(persisted);
+    window.dispatchEvent(new Event("tongwara-consent-change"));
     setSettingsOpen(false);
   }
 

@@ -65,10 +65,10 @@ export function trackEvent(event: AnalyticsEvent, parameters: Record<string, str
   if (process.env.NODE_ENV === "development") console.debug(`[GA4] ${event} ${JSON.stringify(parameters)}`);
 }
 
-export function stopAnalytics() {
+export function stopAnalytics(reload = true) {
   permitted = false;
   disableGoogle(true);
-  // Remove host-only and parent-domain GA cookies before reloading without the tag.
+  // Remove host-only and parent-domain GA cookies, even when consent cannot be saved.
   for (const cookie of document.cookie.split(";")) {
     const name = cookie.trim().split("=")[0];
     if (name !== "_ga" && !name.startsWith("_ga_")) continue;
@@ -79,5 +79,6 @@ export function stopAnalytics() {
       document.cookie = `${expired}; domain=.${parts.slice(index).join(".")}`;
     }
   }
-  if (initialized) window.location.reload();
+  // Reload only when the caller knows the revoked choice survives it.
+  if (initialized && reload) window.location.reload();
 }

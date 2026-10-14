@@ -19,6 +19,8 @@ Analytics uses basic consent mode: no Google script or event requests before aff
 
 The privacy notice explains the processing and contact route. This implementation provides technical consent controls; the site owner must maintain appropriate privacy disclosures and decide retention, access and data-processing arrangements for their circumstances. In GA4 Admin, review event/user data retention and restrict account access to authorised users.
 
+When local storage writes fail, the current document honours the unsaved choice ahead of stale stored consent. Withdrawal still disables analytics and clears GA cookies, but skips the automatic reload so stale stored acceptance cannot immediately reactivate tracking. With storage blocked, an unsaved choice cannot survive a manually forced reload or a new document. Successful writes retain the normal reload behaviour and cross-tab updates.
+
 ## Events
 
 | Event | Trigger | Parameters |
