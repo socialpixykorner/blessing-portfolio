@@ -166,7 +166,7 @@ section[id], footer[id] { scroll-margin-top: 76px; }
 .hero-description { display: grid; grid-template-columns: 84px minmax(0, 540px); gap: 15px; }
 .hero-description > span { color: var(--red); }
 .hero-description p { font-size: clamp(16px, 1.45vw, 21px); font-weight: 500; line-height: 1.35; }
-.hero-links { display: flex; justify-content: flex-end; align-items: start; gap: 28px; }
+.hero-links { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: start; gap: 28px; }
 .hero-links a { color: inherit; border-bottom: 1px solid #171717; padding-bottom: 9px; font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
 .hero-links a:hover { border-color: var(--red); color: var(--red); }
 .portrait-band { background: #191919; color: #fff; }
@@ -245,6 +245,9 @@ section[id], footer[id] { scroll-margin-top: 76px; }
 .swiss-site #contact h2 { font-weight: 600; letter-spacing: -.055em; }
 .swiss-site #contact a[href^="mailto"] { border-radius: 0; background: transparent; border-bottom: 1px solid white; padding: 0 0 7px; height: auto; color: white; font-size: 23px; font-weight: 500; }
 .swiss-site #contact a[href^="mailto"]:hover { color: #e66a58; }
+.contact-cv,.contact-link { border-bottom: 1px solid white; padding-bottom: 7px; color: white; font-size: 23px; font-weight: 500; text-decoration: none; }
+.contact-cv:hover,.contact-link:hover { color: #e66a58; }
+.contact-cv:focus-visible,.contact-link:focus-visible,.hero-links a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .swiss-site #contact p { display: none; }
 .swiss-site h1, .swiss-site h2, .swiss-site h3, .swiss-site blockquote { font-family: "Archivo", Arial, sans-serif; }
 @media (max-width: 900px) { section[id], footer[id] { scroll-margin-top: 76px; }.site-nav { position: relative; }.nav-descriptor,.nav-links { display: none; }.mobile-menu { display: block; margin-left: auto; }.mobile-menu-panel { position: absolute; top: calc(100% + 1px); right: 0; left: 0; z-index: 10; display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); visibility: hidden; border-bottom: 1px solid #171717; background: rgb(244 244 240 / 98%); opacity: 0; transform: translateY(-8px); pointer-events: none; transition: opacity .2s ease, transform .2s ease, visibility .2s; }.mobile-menu.is-open .mobile-menu-panel { visibility: visible; opacity: 1; transform: translateY(0); pointer-events: auto; }.mobile-menu-panel a { display: flex; min-height: 78px; flex-direction: column; justify-content: space-between; gap: 18px; padding: 14px; border-right: 1px solid var(--line); color: inherit; font-size: 13px; font-weight: 600; text-decoration: none; }.mobile-menu-panel a:last-child { border-right: 0; }.mobile-menu-panel a:hover,.mobile-menu-panel a:focus-visible { background: #171717; color: #fff; }.mobile-menu-panel span { color: var(--red); font-family: "IBM Plex Mono",monospace; font-size: 9px; font-weight: 500; }.swiss-hero h1 { font-size: clamp(54px, 9vw, 90px); }.hero-links { gap: 16px; }.portrait-inner { display: flex; flex-direction: column-reverse; }.portrait-photo { min-height: 520px; }.portrait-text { min-height: auto; padding: 45px 0; }.archive-heading { grid-template-columns: 1fr; }.archive-kicker { grid-column: auto; }.archive-intro { max-width: 520px; }.archive-mosaic { grid-template-columns: repeat(2,minmax(0,1fr)); grid-auto-rows: 250px; }.archive-tile,.archive-tile--wide,.archive-tile--narrow,.archive-tile--feature { grid-column: span 1; }.archive-tile:nth-child(1),.archive-tile:nth-child(7) { grid-column: span 2; } }
@@ -254,6 +257,21 @@ section[id], footer[id] { scroll-margin-top: 76px; }
 @media (max-width: 390px) { .swiss-hero h1 { font-size: 46px; }.hero-links a { font-size: 10px; } }
 
 .case-site { background: var(--background); color: var(--foreground); }
+.privacy-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; border-top: 1px solid var(--line); background: var(--background); padding: 18px 20px; font-size: 14px; }
+.privacy-controls a,.privacy-controls button { color: var(--foreground); text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.analytics-consent { position: fixed; right: 20px; bottom: 20px; left: 20px; z-index: 60; display: flex; align-items: center; justify-content: space-between; gap: 32px; border: 1px solid var(--foreground); background: var(--background); color: var(--foreground); padding: 24px; }
+.analytics-consent h2 { margin-bottom: 10px; font-size: 22px; line-height: 1.2; letter-spacing: 0; }
+.analytics-consent p { max-width: 70ch; font-size: 16px; line-height: 1.5; }
+.analytics-consent a,.privacy-notice a { text-decoration: underline; text-underline-offset: 3px; }
+.analytics-consent-actions { display: flex; flex-wrap: wrap; gap: 10px; flex-shrink: 0; max-width: 380px; }
+.analytics-consent button { border: 1px solid var(--foreground); background: transparent; padding: 12px 16px; color: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+.analytics-consent button:hover { background: var(--foreground); color: var(--background); }
+.analytics-consent :focus-visible,.privacy-controls :focus-visible,.privacy-notice a:focus-visible { outline: 2px solid var(--foreground); outline-offset: 4px; }
+.privacy-notice h1 { margin-bottom: 32px; font-size: 48px; line-height: 1.1; letter-spacing: 0; }
+.privacy-notice h2 { margin-top: 40px; margin-bottom: 16px; font-size: 26px; line-height: 1.2; letter-spacing: 0; }
+.privacy-notice p { margin-top: 16px; font-size: 18px; line-height: 1.6; }
+@media (max-width: 900px) { .analytics-consent { align-items: stretch; flex-direction: column; gap: 20px; max-height: calc(100dvh - 40px); overflow-y: auto; }.analytics-consent-actions { max-width: none; } }
+@media (max-width: 700px) { .analytics-consent { right: 12px; left: 12px; bottom: 12px; padding: 20px; }.analytics-consent-actions button { flex: 1; }.privacy-notice h1 { font-size: 38px; } }
 .case-header { border-bottom: 1px solid var(--foreground); background: rgb(244 244 240 / 96%); backdrop-filter: blur(12px); }
 .case-header nav { min-height: 76px; }
 .case-back { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 7px; font-size: 13px; font-weight: 600; }

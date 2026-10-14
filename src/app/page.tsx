@@ -192,6 +192,8 @@ export default function Home() {
           <a
             className="nav-contact"
             href="mailto:hello@tongwara.com"
+            data-analytics-location="header"
+            data-analytics-label="Let's talk"
           >
             <span>Let&apos;s talk</span><span aria-hidden="true">↗</span>
           </a>
@@ -201,7 +203,14 @@ export default function Home() {
       <section className="swiss-hero mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="hero-meta"><span>Portfolio / 2026</span><span>Creative direction · Product · Digital</span><span>01 — Introduction</span></div>
         <div className="hero-center"><div className="hero-intro-line"><p className="hero-name">Tongwara Blessing Katsidzira</p><p className="hero-status"><span />Available for select projects</p></div><h1>CREATIVE DIRECTOR<br /><span>· UX &amp; DIGITAL</span><br />PRODUCT LEAD</h1></div>
-        <div className="hero-base"><div className="hero-description"><span>01 / 05</span><p>I turn complex organisations, brands and digital products into experiences people understand and use.</p></div><div className="hero-links"><a href="#archive">Explore selected work ↘</a><a href="#contact">Start a conversation ↗</a></div></div>
+        <div className="hero-base">
+          <div className="hero-description"><span>01 / 05</span><p>I turn complex organisations, brands and digital products into experiences people understand and use.</p></div>
+          <div className="hero-links">
+            <a href="#archive" data-analytics-event="portfolio_cta_click" data-analytics-location="hero" data-analytics-label="Explore selected work">Explore selected work ↘</a>
+            <a href="#contact" data-analytics-event="contact_click" data-analytics-location="hero" data-analytics-label="Start a conversation">Start a conversation ↗</a>
+            <a href="/documents/tongwara-blessing-katsidzira-cv.pdf" download="Tongwara_Blessing_Katsidzira_CV.pdf" data-analytics-event="resume_download" data-analytics-location="hero" data-analytics-label="CV download">Download CV (PDF)</a>
+          </div>
+        </div>
       </section>
 
       <section className="portrait-band" id="bio">
@@ -262,6 +271,9 @@ export default function Home() {
               className={`archive-tile ${tile.layout}`}
               href={tile.href}
               key={tile.title}
+              data-analytics-event="portfolio_cta_click"
+              data-analytics-location="portfolio_archive"
+              data-analytics-label={tile.title}
             >
               {tile.image ? (
                 <Image
@@ -387,17 +399,37 @@ export default function Home() {
           <h2 className="max-w-5xl text-[clamp(4rem,10vw,9rem)] font-bold leading-[0.88] tracking-tight">
             Have an idea? Let&apos;s talk.
           </h2>
-          <div className="mt-12 flex flex-col justify-between gap-8 border-t border-white/10 pt-8 md:flex-row md:items-end">
+          <div className="mt-12 flex flex-wrap items-center gap-8 border-t border-white/10 pt-8">
             <a
               className="inline-flex h-14 w-fit items-center justify-center rounded-full bg-lime-300 px-7 text-sm font-bold text-black transition hover:bg-white"
               href="mailto:hello@tongwara.com"
+              data-analytics-location="contact_footer"
+              data-analytics-label="Email enquiry"
             >
               hello@tongwara.com
             </a>
-            <p className="max-w-md text-sm font-semibold leading-6 text-white/50">
-              Replace the email, project details, and case studies with
-              Blessing&apos;s real information when ready.
-            </p>
+            <a
+              className="contact-cv"
+              href="/documents/tongwara-blessing-katsidzira-cv.pdf"
+              download="Tongwara_Blessing_Katsidzira_CV.pdf"
+              data-analytics-event="resume_download"
+              data-analytics-location="contact_footer"
+              data-analytics-label="CV download"
+            >
+              Download CV (PDF)
+            </a>
+            <a
+              className="contact-link"
+              href="https://www.linkedin.com/in/blessing-katsidzira-2aa65721/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile (opens in a new tab)"
+              data-analytics-event="linkedin_click"
+              data-analytics-location="contact_footer"
+              data-analytics-label="LinkedIn profile"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
       </footer>

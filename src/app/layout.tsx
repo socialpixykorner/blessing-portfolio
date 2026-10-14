@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Analytics from "./analytics";
+import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Tongwara Blessing Katsidzira | Portfolio",
@@ -14,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        {children}
+        <Analytics caseStudies={projects.map(({ slug, title }) => ({ slug, title }))} />
+      </body>
     </html>
   );
 }
