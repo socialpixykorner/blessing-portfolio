@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowIcon } from "./arrow-icon";
 import { MobileMenu } from "./mobile-menu";
 import {
   siFigma,
@@ -195,7 +196,8 @@ export default function Home() {
             data-analytics-location="header"
             data-analytics-label="Let's talk"
           >
-            <span>Let&apos;s talk</span><span aria-hidden="true">↗</span>
+            <span>Let&apos;s talk</span>
+            <ArrowIcon direction="up-right" size={20} />
           </a>
         </nav>
       </header>
@@ -206,8 +208,12 @@ export default function Home() {
         <div className="hero-base">
           <div className="hero-description"><span>01 / 05</span><p>I turn complex organisations, brands and digital products into experiences people understand and use.</p></div>
           <div className="hero-links">
-            <a href="#archive" data-analytics-event="portfolio_cta_click" data-analytics-location="hero" data-analytics-label="Explore selected work">Explore selected work ↘</a>
-            <a href="#contact" data-analytics-event="contact_click" data-analytics-location="hero" data-analytics-label="Start a conversation">Start a conversation ↗</a>
+            <a href="#archive" data-analytics-event="portfolio_cta_click" data-analytics-location="hero" data-analytics-label="Explore selected work">
+              Explore selected work <ArrowIcon direction="down-right" />
+            </a>
+            <a href="#contact" data-analytics-event="contact_click" data-analytics-location="hero" data-analytics-label="Start a conversation">
+              Start a conversation <ArrowIcon direction="up-right" />
+            </a>
             <a href="/documents/tongwara-blessing-katsidzira-cv.pdf" download="Tongwara_Blessing_Katsidzira_CV.pdf" data-analytics-event="resume_download" data-analytics-location="hero" data-analytics-label="CV download">Download CV (PDF)</a>
           </div>
         </div>
@@ -292,7 +298,7 @@ export default function Home() {
                 <span>{tile.year}</span>
               </span>
               <span className="archive-name">{tile.title}</span>
-              <span className="archive-arrow" aria-hidden="true">↗</span>
+              <ArrowIcon className="archive-arrow" direction="up-right" size={22} />
             </Link>
           ))}
         </div>

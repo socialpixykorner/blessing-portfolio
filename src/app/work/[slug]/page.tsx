@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
+import { ArrowIcon } from "@/app/arrow-icon";
 import { getProject, projects } from "@/lib/projects";
 
 type ProjectPageProps = {
@@ -51,7 +52,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             className="case-back"
             href="/#archive"
           >
-            ← Back to work
+            <ArrowIcon direction="left" /> Back to work
           </Link>
         </nav>
       </header>
